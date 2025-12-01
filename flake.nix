@@ -28,7 +28,7 @@
             version = "0.0.1";
             src = ./.;
 
-            nativeBuildInputs = [ pkgs.tailwindcss ];
+            nativeBuildInputs = [ pkgs.tailwindcss_4 ];
 
             buildPhase = ''
               tailwindcss -i globals.css -o styles.css --minify
