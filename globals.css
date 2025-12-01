@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Pecita";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://fonts.cdnfonts.com/s/341/Pecita.woff) format("woff");
+}
+
+.font-pecita {
+  font-family: "Pecita", cursive;
+}
