@@ -38,6 +38,8 @@
               mkdir -p $out
               cp index.html $out/
               cp styles.css $out/
+              mkdir -p $out/.well-known
+              cp .well-known/webfinger $out/.well-known/
             '';
           };
         }
