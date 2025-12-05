@@ -28,19 +28,45 @@
             version = "0.0.1";
             src = ./.;
 
-            nativeBuildInputs = [ pkgs.tailwindcss_4 ];
+            nativeBuildInputs = [
+              pkgs.nodejs
+              pkgs.pnpm.configHook
+            ];
+
+            pnpmDeps = pkgs.pnpm.fetchDeps {
+              pname = "diogocastro-website";
+              version = "0.0.1";
+              src = ./.;
+              fetcherVersion = 2;
+              hash = "sha256-hwI/NvTTuDwvbD32Yx23w+zu5nNLli+crP0aZwiJReg=";
+            };
+
+            env.ASTRO_TELEMETRY_DISABLED = 1;
 
             buildPhase = ''
-              tailwindcss -i globals.css -o styles.css --minify
+              pnpm run build
             '';
 
             installPhase = ''
               mkdir -p $out
-              cp index.html $out/
-              cp styles.css $out/
-              mkdir -p $out/.well-known
-              cp .well-known/webfinger $out/.well-known/
+              cp -r dist/* $out/
             '';
+          };
+        }
+      );
+
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        {
+          default = pkgs.mkShell {
+            buildInputs = [
+              pkgs.nodejs
+              pkgs.pnpm
+              pkgs.just
+            ];
           };
         }
       );
@@ -73,7 +99,7 @@
               virtualHosts.${cfg.domain} = {
                 serverAliases = [ "www.${cfg.domain}" ];
                 extraConfig = ''
-                  root * ${self.packages.${pkgs.system}.default}
+                  root * ${self.packages.${pkgs.stdenv.hostPlatform.system}.default}
                   file_server
                   encode gzip
                 '';

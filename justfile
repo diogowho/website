@@ -1,4 +1,10 @@
 default: build
 
 build:
-  nix run nixpkgs#tailwindcss_4 -- -i globals.css -o styles.css --minify
+  pnpm run build
+
+dev:
+  pnpm run dev
+
+nix:
+  nix build -L
