@@ -38,7 +38,7 @@
               version = "0.0.1";
               src = ./.;
               fetcherVersion = 2;
-              hash = "sha256-hwI/NvTTuDwvbD32Yx23w+zu5nNLli+crP0aZwiJReg=";
+              hash = "sha256-XX0OJxipVnJLDuvFzBWT5A/uLcFJSR7/RQtCXk25Wkk=";
             };
 
             env.ASTRO_TELEMETRY_DISABLED = 1;
