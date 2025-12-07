@@ -8,3 +8,6 @@ dev:
 
 nix:
   nix build -L
+
+format:
+  pnpm exec prettier . --write
