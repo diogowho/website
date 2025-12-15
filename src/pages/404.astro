@@ -1,0 +1,57 @@
+---
+import "../styles/globals.css";
+---
+
+<html
+  lang="en"
+  class="font-mono text-sm leading-normal"
+  style="color-scheme: light dark;"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div
+      class="relative grid min-h-screen grid-cols-[1fr_2.5rem_auto_2.5rem_1fr] grid-rows-[1fr_1px_auto_1px_1fr] [--pattern-fg:var(--color-white)]/10"
+    >
+      <div
+        class="col-start-3 row-start-3 flex max-w-lg flex-col bg-white/10 p-2"
+      >
+        <div class="space-y-6 rounded-xl bg-[#121212] p-10">
+          <div class="space-y-4 text-center">
+            <h1 class="font-pecita text-5xl font-bold">404</h1>
+            <p class="text-[#888888]">
+              The page you're looking for might have been moved or doesn't
+              exist.
+            </p>
+          </div>
+
+          <a
+            href="/"
+            class="mx-auto flex h-9 w-fit items-center rounded-lg bg-violet-600 px-4 py-2 font-medium text-white hover:opacity-90 focus-visible:ring-2 focus-visible:ring-violet-600 focus-visible:ring-offset-2 focus-visible:ring-offset-[#121212] focus-visible:outline-none"
+          >
+            Go Home
+          </a>
+        </div>
+      </div>
+      <div
+        class="relative -right-px col-start-2 row-span-full row-start-1 border-x border-x-(--pattern-fg) bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed"
+      >
+      </div>
+      <div
+        class="relative -left-px col-start-4 row-span-full row-start-1 border-x border-x-(--pattern-fg) bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed"
+      >
+      </div>
+      <div
+        class="relative -bottom-px col-span-full col-start-1 row-start-2 h-px bg-(--pattern-fg)"
+      >
+      </div>
+      <div
+        class="relative -top-px col-span-full col-start-1 row-start-4 h-px bg-(--pattern-fg)"
+      >
+      </div>
+    </div>
+  </body>
+</html>
