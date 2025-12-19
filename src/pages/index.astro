@@ -3,6 +3,31 @@ import "../styles/globals.css";
 import pkg from "../../package.json";
 
 const astroVersion = pkg.dependencies.astro.replace(/^[^0-9]+/, "");
+
+const pages = [
+  { name: "Infrastructure", url: "/infra" },
+];
+
+const socials = [
+  { name: "Codeberg", url: "https://codeberg.org/diogocastro" },
+  { name: "Mastodon", url: "https://mastodon.social/@diogocastro", rel: "me" },
+  {
+    name: "Bluesky",
+    url: "https://bsky.app/profile/did:plc:unut65tqbd4kvczdh24tazwm",
+  },
+  {
+    name: "Steam",
+    url: "https://steamcommunity.com/profiles/76561198950840617",
+  },
+  {
+    name: "Discord",
+    url: "https://discord.com/users/1439295481325949041",
+    title:
+      "This link will only work if we share mutual servers. My username is @diogo.fi",
+  },
+  { name: "Matrix", url: "https://matrix.to/#/@diogocastro:matrix.org" },
+  { name: "Email", url: "mailto:public@diogocastro.net" },
+];
 ---
 
 <html
@@ -97,56 +122,42 @@ const astroVersion = pkg.dependencies.astro.replace(/^[^0-9]+/, "");
       </section>
 
       <section class="mb-8">
+        <h2 class="mb-2 text-base font-bold text-[#888888]">Pages</h2>
+        <nav class="flex flex-wrap gap-4">
+          {
+            pages.map((page) => (
+              <a
+                href={page.url}
+                class="text-inherit underline decoration-1 hover:no-underline"
+              >
+                {page.name}
+              </a>
+            ))
+          }
+        </nav>
+      </section>
+
+      <section class="mb-8">
         <h2 class="mb-2 text-base font-bold text-[#888888]">Socials</h2>
         <nav class="flex flex-wrap gap-4">
-          <a
-            href="https://codeberg.org/diogocastro"
-            class="text-inherit underline decoration-1 hover:no-underline"
-            >Codeberg</a
-          >
-
-          <a
-            rel="me"
-            href="https://mastodon.social/@diogocastro"
-            class="text-inherit underline decoration-1 hover:no-underline"
-            >Mastodon</a
-          >
-
-          <a
-            href="https://bsky.app/profile/did:plc:unut65tqbd4kvczdh24tazwm"
-            class="text-inherit underline decoration-1 hover:no-underline"
-            >Bluesky</a
-          >
-
-          <a
-            href="https://steamcommunity.com/profiles/76561198950840617"
-            class="text-inherit underline decoration-1 hover:no-underline"
-            >Steam</a
-          >
-
-          <a
-            href="https://discord.com/users/1439295481325949041"
-            class="text-inherit underline decoration-1 hover:no-underline"
-            title="This link will only work if we share mutual servers. My username is @diogo.fi"
-            >Discord</a
-          >
-
-          <a
-            href="https://matrix.to/#/@diogocastro:matrix.org"
-            class="text-inherit underline decoration-1 hover:no-underline"
-            >Matrix</a
-          >
-
-          <a
-            href="mailto:hello@diogocastro.net"
-            class="text-inherit underline decoration-1 hover:no-underline"
-            >Email</a
-          >
-
-          <span
-            class="cursor-help text-[#888888] underline decoration-wavy"
-            title="Mutuals may ask for my username.">Signal</span
-          >
+          {
+            socials.map((social) =>
+              social.url ? (
+                <a
+                  href={social.url}
+                  rel={social.rel}
+                  title={social.title}
+                  class="text-inherit underline decoration-1 hover:no-underline"
+                >
+                  {social.name}
+                </a>
+              ) : (
+                <span class={social.class} title={social.title}>
+                  {social.name}
+                </span>
+              )
+            )
+          }
         </nav>
       </section>
 
