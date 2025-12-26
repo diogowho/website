@@ -1,0 +1,33 @@
+---
+import "../styles/globals.css";
+
+interface Props {
+  title: string;
+  showBackLink?: boolean;
+}
+
+const { title, showBackLink = false } = Astro.props;
+---
+
+<html
+  lang="en"
+  class="font-mono text-sm leading-normal"
+  style="color-scheme: light dark;"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Diogo Castro</title>
+  </head>
+  <body class="flex min-h-screen items-center justify-center p-8">
+    <main class="w-full max-w-[600px]">
+      <header class="mb-6">
+        <h1 class="text-2xl font-normal tracking-tighter">{title}</h1>
+        {showBackLink && (
+          <a href="/" class="text-[#888888] hover:underline">← Back to home</a>
+        )}
+      </header>
+      <slot />
+    </main>
+  </body>
+</html>

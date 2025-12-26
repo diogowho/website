@@ -1,5 +1,5 @@
 ---
-import "../styles/globals.css";
+import Layout from "../layouts/Default.astro";
 
 const servers = [
   {
@@ -14,26 +14,16 @@ const servers = [
     location: "Helsinki, FI",
     hostname: "hel.diogocastro.net",
   },
+  {
+    name: "dahlia",
+    provider: "Myself",
+    location: "Setúbal, PT"
+  }
 ];
 ---
 
-<html
-  lang="en"
-  class="font-mono text-sm leading-normal"
-  style="color-scheme: light dark;"
->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Infrastructure | Diogo Castro</title>
-  </head>
-  <body class="flex min-h-screen items-center justify-center p-8">
-    <main class="w-full max-w-[600px]">
-      <header class="mb-6">
-        <h1 class="text-2xl font-normal tracking-tighter">Infrastructure</h1>
-      </header>
-
-      <section class="mb-8">
+<Layout title="Infrastructure" showBackLink={true}>
+  <section class="mb-8">
         <h2 class="mb-2 text-base font-bold text-[#888888]">What's this?</h2>
         <p class="mb-4">
           Coming from my love for networking and servers, I decided to start hosting my own services and websites.
@@ -57,8 +47,6 @@ const servers = [
               </div>
             </li>
           ))}
-        </ul>
-      </section>
-    </main>
-  </body>
-</html>
+    </ul>
+  </section>
+</Layout>
