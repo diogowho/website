@@ -27,10 +27,14 @@
         in
         {
           default = pkgs.mkShell {
-            buildInputs = [
-              pkgs.nodejs
-              pkgs.pnpm
-              pkgs.just
+            buildInputs = with pkgs; [
+              nodejs
+              pnpm
+              just
+              astro-language-server
+              tailwindcss-language-server
+              typescript-language-server
+              typescript
             ];
           };
         }
