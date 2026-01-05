@@ -17,13 +17,13 @@
         "aarch64-darwin"
       ];
 
-      forAllSystems = fn: lib.genAttrs systems (system: fn (import nixpkgs { inherit system; }));
+      forAllSystems = fn: lib.genAttrs systems (system: fn system);
     in
     {
       devShells = forAllSystems (
         system:
         let
-          pkgs = nixpkgs.legacyPackages.${system};
+          pkgs = import nixpkgs { inherit system; };
         in
         {
           default = pkgs.mkShell {
@@ -36,6 +36,12 @@
         }
       );
 
-      formatter = forAllSystems (pkgs: pkgs.nixfmt-tree);
+      formatter = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+        in
+        pkgs.nixfmt-tree
+      );
     };
 }
