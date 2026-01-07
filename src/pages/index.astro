@@ -5,13 +5,17 @@ import pkg from "../../package.json";
 const astroVersion = pkg.dependencies.astro.replace(/^[^0-9]+/, "");
 
 const pages = [
-  { name: "Infrastructure", url: "/infra" },
+  { name: "AS207118", url: "https://as207118.net" },
   { name: "Privacy", url: "/privacy" },
 ];
 
 const socials = [
   { name: "Codeberg", url: "https://codeberg.org/diogocastro" },
-  { name: "GitHub", url: "https://github.com/diogowho", title: "Repositories on GitHub are mirrors of my Codeberg" },
+  {
+    name: "GitHub",
+    url: "https://github.com/diogowho",
+    title: "Repositories on GitHub are mirrors of my Codeberg",
+  },
   {
     name: "Bluesky",
     url: "https://bsky.app/profile/did:plc:unut65tqbd4kvczdh24tazwm",
@@ -156,7 +160,7 @@ const socials = [
                 <span class={social.class} title={social.title}>
                   {social.name}
                 </span>
-              )
+              ),
             )
           }
         </nav>

@@ -23,9 +23,13 @@ const { title, showBackLink = false } = Astro.props;
     <main class="w-full max-w-[600px]">
       <header class="mb-6">
         <h1 class="text-2xl font-normal tracking-tighter">{title}</h1>
-        {showBackLink && (
-          <a href="/" class="text-[#888888] hover:underline">← Back to home</a>
-        )}
+        {
+          showBackLink && (
+            <a href="/" class="text-[#888888] hover:underline">
+              ← Back to home
+            </a>
+          )
+        }
       </header>
       <slot />
     </main>
