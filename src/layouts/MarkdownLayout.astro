@@ -1,0 +1,28 @@
+---
+import Layout from "./Default.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title} showBackLink={frontmatter.showBackLink}>
+  <div class="markdown-content">
+    <slot />
+  </div>
+</Layout>
+
+<style is:global>
+  @reference "../styles/globals.css";
+
+  .markdown-content h2 {
+    @apply mb-2 mt-8 text-base font-bold text-[#888888];
+  }
+  .markdown-content h2:first-child {
+    @apply mt-0;
+  }
+  .markdown-content p {
+    @apply mb-4;
+  }
+  .markdown-content a {
+    @apply underline;
+  }
+</style>

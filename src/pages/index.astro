@@ -1,5 +1,5 @@
 ---
-import "../styles/globals.css";
+import Layout from "../layouts/Default.astro";
 import pkg from "../../package.json";
 
 const astroVersion = pkg.dependencies.astro.replace(/^[^0-9]+/, "");
@@ -29,21 +29,12 @@ const socials = [
     title:
       "This link will only work if we share mutual servers. My username is @diogo.fi",
   },
-  { name: "Matrix", url: "https://matrix.to/#/@diogocastro:matrix.org" },
   { name: "Email", url: "mailto:public@diogocastro.net" },
 ];
 ---
 
-<html
-  lang="en"
-  class="font-mono text-sm leading-normal"
-  style="color-scheme: light dark;"
->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Diogo Castro</title>
+<Layout title="Diogo Castro">
+  <Fragment slot="head">
     <meta name="title" content="Diogo Castro" />
     <meta
       name="description"
@@ -95,79 +86,77 @@ const socials = [
     </script>
 
     <link rel="sitemap" href="/sitemap-index.xml" />
-  </head>
-  <body class="flex min-h-screen items-center justify-center p-8">
-    <main class="w-full max-w-[600px]">
-      <header
-        class="mb-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center"
-      >
-        <img
-          src="https://github.com/diogowho.png"
-          alt="diogo castro"
-          class="h-20 w-20 rounded-full"
-        />
-        <h1 class="font-pecita text-2xl tracking-tighter">Diogo Castro</h1>
-      </header>
+  </Fragment>
 
-      <section class="mb-8">
-        <p class="mb-2">
-          Computer science undergraduate at the <a
-            href="https://estsetubal.ips.pt/"
+  <header
+    slot="header"
+    class="mb-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center"
+  >
+    <img
+      src="https://github.com/diogowho.png"
+      alt="diogo castro"
+      class="h-20 w-20 rounded-full"
+    />
+    <h1 class="font-pecita text-2xl tracking-tighter">Diogo Castro</h1>
+  </header>
+
+  <section class="mb-8">
+    <p class="mb-2">
+      Computer science undergraduate at the <a
+        href="https://estsetubal.ips.pt/"
+        class="text-inherit underline decoration-1 hover:no-underline"
+        >Polytechnic Institute of Setúbal</a
+      >. When I'm not having classes, I'm usually messing with computers,
+      networking, learning new things, shitposting or lurking online.
+    </p>
+
+    <p class="mb-4">
+      I started writing code at the age of 9, and have been passionate about
+      tech ever since. I also enjoy gaming casually.
+    </p>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="mb-2 text-base font-bold text-[#888888]">Pages</h2>
+    <nav class="flex flex-wrap gap-4">
+      {
+        pages.map((page) => (
+          <a
+            href={page.url}
             class="text-inherit underline decoration-1 hover:no-underline"
-            >Polytechnic Institute of Setúbal</a
-          >. When I'm not having classes, I'm usually messing with computers,
-          networking, learning new things, shitposting or lurking online.
-        </p>
+          >
+            {page.name}
+          </a>
+        ))
+      }
+    </nav>
+  </section>
 
-        <p class="mb-4">
-          I started writing code at the age of 9, and have been passionate about
-          tech ever since. I also enjoy gaming casually.
-        </p>
-      </section>
+  <section class="mb-8">
+    <h2 class="mb-2 text-base font-bold text-[#888888]">Socials</h2>
+    <nav class="flex flex-wrap gap-4">
+      {
+        socials.map((social) =>
+          social.url ? (
+            <a
+              href={social.url}
+              rel={social.rel}
+              title={social.title}
+              class="text-inherit underline decoration-1 hover:no-underline"
+            >
+              {social.name}
+            </a>
+          ) : (
+            <span class={social.class} title={social.title}>
+              {social.name}
+            </span>
+          ),
+        )
+      }
+    </nav>
+  </section>
 
-      <section class="mb-8">
-        <h2 class="mb-2 text-base font-bold text-[#888888]">Pages</h2>
-        <nav class="flex flex-wrap gap-4">
-          {
-            pages.map((page) => (
-              <a
-                href={page.url}
-                class="text-inherit underline decoration-1 hover:no-underline"
-              >
-                {page.name}
-              </a>
-            ))
-          }
-        </nav>
-      </section>
-
-      <section class="mb-8">
-        <h2 class="mb-2 text-base font-bold text-[#888888]">Socials</h2>
-        <nav class="flex flex-wrap gap-4">
-          {
-            socials.map((social) =>
-              social.url ? (
-                <a
-                  href={social.url}
-                  rel={social.rel}
-                  title={social.title}
-                  class="text-inherit underline decoration-1 hover:no-underline"
-                >
-                  {social.name}
-                </a>
-              ) : (
-                <span class={social.class} title={social.title}>
-                  {social.name}
-                </span>
-              ),
-            )
-          }
-        </nav>
-      </section>
-
-      <footer class="text-[10px] text-[#888888]">
-        <p>Astro v{astroVersion}</p>
-      </footer>
-    </main>
-  </body>
-</html>
+  <footer class="text-[10px] text-[#888888]">
+    <p>Astro v{astroVersion}</p>
+  </footer>
+</Layout>
