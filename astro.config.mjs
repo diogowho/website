@@ -5,13 +5,18 @@ import sitemap from "@astrojs/sitemap";
 
 import tailwindcss from "@tailwindcss/vite";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://diogocastro.net",
-
   integrations: [sitemap()],
 
   vite: {
     plugins: [tailwindcss()],
   },
+
+  adapter: cloudflare({
+    imageService: { build: "compile", runtime: "cloudflare-binding" },
+  }),
 });
