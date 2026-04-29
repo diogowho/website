@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-set -euo pipefail
+set -eu
 find "$DIST_DIR" -type f | while read -r file; do
   remote_path="${file#$DIST_DIR/}"
   curl -s -X PUT \
