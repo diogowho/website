@@ -1,0 +1,32 @@
+name: deploy to bunnycdn
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: codeberg-tiny
+    container:
+      image: node:22-alpine
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install pnpm
+        run: npm i -g pnpm
+
+      - name: install deps & build
+        run: pnpm install && pnpm build
+
+      - name: deploy
+        run: |
+          chmod +x ./deploy.sh
+          ./deploy.sh
+        env:
+          STORAGE_ZONE: ${{ secrets.BUNNY_STORAGE_ZONE }}
+          STORAGE_KEY: ${{ secrets.BUNNY_STORAGE_KEY }}
+          PULL_ZONE_ID: ${{ secrets.BUNNY_PULL_ZONE_ID }}
+          API_KEY: ${{ secrets.BUNNY_API_KEY }}
+          DIST_DIR: ./dist
