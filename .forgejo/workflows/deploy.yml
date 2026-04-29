@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: codeberg-tiny
     container:
-      image: node:22-alpine
+      image: node:22
 
     steps:
       - uses: actions/checkout@v4
