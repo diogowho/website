@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 set -euo pipefail
 find "$DIST_DIR" -type f | while read -r file; do
   remote_path="${file#$DIST_DIR/}"
