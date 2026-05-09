@@ -33,8 +33,9 @@
               just
               astro-language-server
               tailwindcss-language-server
-              typescript-language-server
               typescript
+              prettierd
+              vtsls
             ];
           };
         }
