@@ -1,0 +1,268 @@
+---
+import Layout from "../layouts/Default.astro";
+
+const categories = [
+  {
+    name: "Hardware",
+    items: [
+      {
+        name: "MacBook Pro (16-inch, M3 Pro, 18GB RAM, 512GB SSD)",
+        desc: "my daily driver",
+      },
+      {
+        name: "iPhone 15 Pro (128GB)",
+        desc: "my phone lul",
+      },
+      {
+        name: "Apple Watch (S11)",
+        desc: "fitness tracking, notifications and health monitoring",
+      },
+      {
+        name: "iPad Air (M2)",
+        desc: "for note-taking, light gaming and sketching",
+      },
+      {
+        name: "AirPods Pro (2nd gen)",
+        desc: "for listening to music on the go",
+      },
+    ],
+  },
+  {
+    name: "Web (browser & extensions)",
+    items: [
+      {
+        name: "Safari",
+        desc: "every browser on iOS is just Safari with a different UI and the sync with iCloud is great for me, I also don't require much of a browser",
+      },
+      {
+        name: "uBlock Origin Lite",
+        desc: "lightweight ad blocker",
+        url: "https://github.com/uBlockOrigin/uBOL-home",
+      },
+      {
+        name: "Sink It",
+        desc: "better reddit experience",
+        url: "https://gosinkit.com",
+      },
+      {
+        name: "SponsorBlock",
+        desc: "skips sponsored content on YouTube",
+        url: "https://sponsor.ajay.app",
+      },
+      {
+        name: "Tampermonkey",
+        desc: "user scripts",
+        url: "https://www.tampermonkey.net/index.php",
+      },
+      {
+        name: "Return YouTube Dislike",
+        desc: "returns the dislike count on YouTube",
+        url: "https://returnyoutubedislike.com",
+      },
+    ],
+  },
+  {
+    name: "Communication",
+    items: [
+      {
+        name: "Signal",
+        desc: "open-source encrypted messaging",
+        url: "https://signal.org",
+      },
+      {
+        name: "Element",
+        desc: "Matrix-based messaging",
+        url: "https://element.io",
+      },
+      {
+        name: "Vesktop",
+        desc: "custom Discord client",
+        url: "https://vesktop.dev",
+      },
+    ],
+  },
+  {
+    name: "Development",
+    items: [
+      {
+        name: "Ghostty",
+        desc: "feature-rich terminal emulator",
+        url: "https://ghostty.org",
+      },
+      {
+        name: "Neovim",
+        desc: "highly extensible text editor",
+        url: "https://neovim.org",
+      },
+      {
+        name: "Zed",
+        desc: "lightweight, minimal code editor",
+        url: "https://zed.dev",
+      },
+      {
+        name: "UTM",
+        desc: "lightweight, open-source virtual machine manager for Apple Silicon",
+        url: "https://mac.getutm.app",
+      },
+      {
+        name: "Xcode",
+        desc: "Apple's integrated development environment",
+        url: "https://developer.apple.com/xcode",
+      },
+    ],
+  },
+  {
+    name: "Productivity",
+    items: [
+      {
+        name: "NetNewsWire",
+        desc: "rss reader",
+        url: "https://netnewswire.com",
+      },
+      {
+        name: "AeroSpace",
+        desc: "macOS tiling window manager",
+        url: "https://github.com/nikitabobko/AeroSpace",
+      },
+      {
+        name: "Sketch",
+        desc: "design tool",
+        url: "https://sketch.com",
+      },
+      {
+        name: "Shottr",
+        desc: "screenshot tool for macOS",
+        url: "https://shottr.cc",
+      },
+    ],
+  },
+  {
+    name: "Media",
+    items: [
+      {
+        name: "Apple Music",
+        desc: "music streaming",
+        url: "https://www.apple.com/apple-music/",
+      },
+    ],
+  },
+  {
+    name: "Dev/Ops",
+    items: [
+      {
+        name: "Codeberg",
+        desc: "git forge, open source and privacy-focused",
+        url: "https://codeberg.org",
+      },
+      {
+        name: "Bunny",
+        desc: "european content delivery network",
+        url: "https://bunny.net",
+      },
+    ],
+  },
+  {
+    name: "Security/Privacy",
+    items: [
+      {
+        name: "Apple Passwords",
+        desc: "built-in password manager for iCloud Keychain",
+      },
+      {
+        name: "Kagi",
+        desc: "privacy-respecting search engine",
+        url: "https://kagi.com",
+      },
+    ],
+  },
+  {
+    name: "Gaming",
+    items: [
+      {
+        name: "Steam",
+        desc: "primary gaming platform and game library",
+        url: "https://steampowered.com",
+      },
+    ],
+  },
+  {
+    name: "Websites",
+    items: [
+      {
+        name: "SteamDB",
+        desc: "Steam game database and analytics",
+        url: "https://steamdb.info",
+      },
+    ],
+  },
+  {
+    name: "(Programming) Languages",
+    items: [
+      {
+        name: "JavaScript",
+        desc: "my first-ever programming language and I still use it for web development",
+      },
+      {
+        name: "TypeScript",
+        desc: "typed superset of JavaScript",
+        url: "https://www.typescriptlang.org",
+      },
+      {
+        name: "Swift",
+        desc: "programming language for iOS and macOS development",
+        url: "https://www.swift.org",
+      },
+    ],
+  },
+  {
+    name: "Utilities",
+    items: [
+      {
+        name: "Homebrew",
+        desc: "package manager for macOS",
+        url: "https://brew.sh",
+      },
+      {
+        name: "Nix",
+        desc: "purely functional package manager",
+        url: "https://nixos.org",
+      },
+      {
+        name: "nix-darwin",
+        desc: "manage macOS using Nix",
+        url: "https://github.com/nix-darwin/nix-darwin",
+      },
+      {
+        name: "home-manager",
+        desc: "manage user environment using Nix",
+        url: "https://github.com/nix-community/home-manager",
+      },
+    ],
+  },
+];
+---
+
+<Layout title="Uses" showBackLink={true}>
+  <p class="mb-8">
+    A long list of the hardware, software, and services I use regularly.
+  </p>
+
+  {
+    categories.map((category) => (
+      <section class="mb-8">
+        <h2 class="mb-2 text-base font-bold text-[#888888]">{category.name}</h2>
+        <ul
+          style="list-style-type: disc; padding-left: 1.25rem;"
+          class="list-outside"
+        >
+          {category.items.map((item) => {
+            const name = item.url
+              ? `<a href="${item.url}" rel="noopener noreferrer" target="_blank" class="text-inherit underline decoration-1 hover:no-underline"><strong>${item.name}</strong></a>`
+              : `<strong>${item.name}</strong>`;
+            return <li class="ml-1" set:html={name + ": " + item.desc} />;
+          })}
+        </ul>
+      </section>
+    ))
+  }
+</Layout>
