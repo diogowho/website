@@ -4,7 +4,7 @@ import pkg from "../../package.json";
 
 const astroVersion = pkg.dependencies.astro.replace(/^[^0-9]+/, "");
 
-const pages = [
+const pages: { name: string; url: string }[] = [
   { name: "AS207118", url: "https://as207118.net" },
   { name: "Privacy", url: "/privacy" },
   { name: "Transparency", url: "/transparency" },
@@ -12,7 +12,7 @@ const pages = [
   { name: "Uses", url: "/uses" },
 ];
 
-const socials = [
+const socials: { name: string; url: string; title?: string }[] = [
   { name: "Codeberg", url: "https://codeberg.org/diogocastro" },
   {
     name: "Fedi",
@@ -35,60 +35,6 @@ const socials = [
 ---
 
 <Layout title="Diogo Castro">
-  <Fragment slot="head">
-    <meta name="title" content="Diogo Castro" />
-    <meta
-      name="description"
-      content="Diogo Castro's chaotic corner of the web."
-    />
-    <meta
-      name="keywords"
-      content="Diogo Castro, Diogo, Castro, Computer Science, Developer, Programmer, Portugal, Setúbal, IPS, Polytechnic Institute of Setúbal, Software Engineer, Web Developer, GitHub, diogowho, networking, technology"
-    />
-    <meta name="author" content="Diogo Castro" />
-    <link rel="canonical" href="https://diogocastro.net" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://diogocastro.net" />
-    <meta property="og:title" content="Diogo Castro" />
-    <meta
-      property="og:description"
-      content="Diogo Castro's chaotic corner of the web."
-    />
-    <meta property="og:image" content="https://github.com/diogowho.png" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Diogo Castro" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Diogo Castro",
-        "url": "https://diogocastro.net",
-        "image": "https://codeberg.org/diogocastro.png",
-        "jobTitle": "Computer Science Student",
-        "description": "Computer Science undergraduate at the Polytechnic Institute of Setúbal, Portugal",
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "Polytechnic Institute of Setúbal"
-        },
-        "nationality": {
-          "@type": "Country",
-          "name": "Portugal"
-        },
-        "sameAs": [
-          "https://github.com/diogowho",
-          "https://codeberg.org/diogocastro",
-          "https://steamcommunity.com/profiles/76561198950840617",
-          "https://dissociat.ing/@iz"
-        ],
-        "email": "website@diogocastro.net"
-      }
-    </script>
-
-    <link rel="sitemap" href="/sitemap-index.xml" />
-  </Fragment>
-
   <header
     slot="header"
     class="mb-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center"
@@ -137,22 +83,16 @@ const socials = [
     <h2 class="mb-2 text-base font-bold text-[#888888]">Socials</h2>
     <nav class="flex flex-wrap gap-4">
       {
-        socials.map((social) =>
-          social.url ? (
-            <a
-              href={social.url}
-              rel={social.rel}
-              title={social.title}
-              class="text-inherit underline decoration-1 hover:no-underline"
-            >
-              {social.name}
-            </a>
-          ) : (
-            <span class={social.class} title={social.title}>
-              {social.name}
-            </span>
-          ),
-        )
+        socials.map((social) => (
+          <a
+            href={social.url}
+            rel="noopener noreferrer"
+            title={social.title ? social.title : undefined}
+            class="text-inherit underline decoration-1 hover:no-underline"
+          >
+            {social.name}
+          </a>
+        ))
       }
     </nav>
   </section>
