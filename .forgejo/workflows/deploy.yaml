@@ -35,6 +35,6 @@ jobs:
       - name: deploy to git-pages
         uses: actions/git-pages@065ca51993541b3e0d8a6becd93c627a9fee3584
         with:
-          site: http://diogocastro.net/
+          site: https://diogocastro.net/
           token: ${{ forge.token }}
           source: dist/
