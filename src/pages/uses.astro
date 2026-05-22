@@ -76,7 +76,7 @@ const categories = [
       },
       {
         name: "Vesktop",
-        desc: "custom Discord client",
+        desc: "custom Discord client (unfortunately a lot of my peers still use Discord)",
         url: "https://vesktop.dev",
       },
     ],
@@ -93,11 +93,6 @@ const categories = [
         name: "Neovim",
         desc: "highly extensible text editor",
         url: "https://neovim.org",
-      },
-      {
-        name: "Zed",
-        desc: "lightweight, minimal code editor",
-        url: "https://zed.dev",
       },
       {
         name: "UTM",
@@ -130,9 +125,20 @@ const categories = [
         url: "https://sketch.com",
       },
       {
-        name: "Shottr",
-        desc: "screenshot tool for macOS",
-        url: "https://shottr.cc",
+        name: "Spotlight",
+        desc: "macOS's native launcher (I've tried Alfred and Raycast, but Raycast is VC-funded and Spotlight just does the same as Alfred on Tahoe)",
+      },
+      {
+        name: "Apple Notes",
+        desc: "I've tried a lot of note-taking apps and I keep coming back to Apple Notes, it's dead simple, and syncs across my devices",
+      },
+      {
+        name: "Apple Reminders",
+        desc: "same reason as Notes",
+      },
+      {
+        name: "Apple Calendar",
+        desc: "same reason as Reminders",
       },
     ],
   },
@@ -143,6 +149,20 @@ const categories = [
         name: "Apple Music",
         desc: "music streaming",
         url: "https://www.apple.com/apple-music/",
+      },
+      {
+        name: "Apple Photos",
+        desc: "it just works",
+      },
+      {
+        name: "Pixelmator Pro",
+        desc: "photo editing",
+        url: "https://www.apple.com/uk/pixelmator-pro/",
+      },
+      {
+        name: "Procreate",
+        desc: "drawing",
+        url: "https://procreate.com",
       },
     ],
   },
@@ -162,16 +182,26 @@ const categories = [
     ],
   },
   {
-    name: "Security/Privacy",
+    name: "Utilities",
     items: [
       {
         name: "Apple Passwords",
-        desc: "built-in password manager for iCloud Keychain",
+        desc: "password manager",
       },
       {
         name: "Kagi",
         desc: "privacy-respecting search engine",
         url: "https://kagi.com",
+      },
+      {
+        name: "Parcel",
+        desc: "delivery tracker",
+        url: "https://parcel.app",
+      },
+      {
+        name: "Rocket",
+        desc: "emoji picker for macOS",
+        url: "https://matthewpalmer.net/rocket/",
       },
     ],
   },
@@ -215,7 +245,7 @@ const categories = [
     ],
   },
   {
-    name: "Utilities",
+    name: "System",
     items: [
       {
         name: "Homebrew",
@@ -259,7 +289,12 @@ const categories = [
             const name = item.url
               ? `<a href="${item.url}" rel="noopener noreferrer" target="_blank" class="text-inherit underline decoration-1 hover:no-underline"><strong>${item.name}</strong></a>`
               : `<strong>${item.name}</strong>`;
-            return <li class="ml-1" set:html={name + ": " + item.desc} />;
+            return (
+              <li
+                class="ml-1"
+                set:html={name + (item.desc ? ": " + item.desc : "")}
+              />
+            );
           })}
         </ul>
       </section>
