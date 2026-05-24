@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/MarkdownLayout.astro
+layout: ../layouts/Content.astro
 title: AI
 showBackLink: true
 ---

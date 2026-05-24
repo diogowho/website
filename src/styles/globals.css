@@ -11,3 +11,7 @@
 .font-pecita {
   font-family: "Pecita", cursive;
 }
+
+a {
+@apply text-[#FF2255] underline;
+}

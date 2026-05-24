@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/MarkdownLayout.astro
+layout: ../layouts/Content.astro
 title: Privacy Policy
 showBackLink: true
 ---
@@ -12,7 +12,7 @@ I don't collect your data. At all.
 
 **Myself**: No ads, no cookies, no tracking. The only logs are the bare minimum (timestamps, requests). Nothing personal, nothing stored.
 
-**Bunny.net**: I use their DNS and CDN. They may log basic request metadata (IP address, User-Agent, timestamps) purely to provide those services and protect against abuse. You can read their full policy [here](https://bunny.net/privacy/).
+**Bunny**: I use their DNS and CDN. They may log basic request metadata (IP address, User-Agent, timestamps) purely to provide those services and protect against abuse. You can read their full policy [here](https://bunny.net/privacy/).
 
 ## What This Means For You
 
