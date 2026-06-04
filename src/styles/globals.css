@@ -13,5 +13,5 @@
 }
 
 a {
-@apply text-[#FF2255] underline;
+  @apply text-[#FF2255] underline;
 }

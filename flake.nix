@@ -10,43 +10,23 @@
     let
       inherit (nixpkgs) lib;
 
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ];
-
-      forAllSystems = fn: lib.genAttrs systems (system: fn system);
+      forAllSystems =
+        fn:
+        lib.genAttrs [
+          "x86_64-linux"
+          "x86_64-darwin"
+          "aarch64-linux"
+          "aarch64-darwin"
+        ] (system: fn (import nixpkgs { inherit system; }));
     in
     {
-      devShells = forAllSystems (
-        system:
-        let
-          pkgs = import nixpkgs { inherit system; };
-        in
-        {
-          default = pkgs.mkShell {
-            buildInputs = with pkgs; [
-              nodejs
-              pnpm
-              just
-              astro-language-server
-              tailwindcss-language-server
-              typescript
-              prettierd
-              vtsls
-            ];
-          };
-        }
-      );
+      packages = forAllSystems (pkgs: {
+        default = self.packages.${pkgs.stdenv.hostPlatform.system}.diogocastro-website;
+        diogocastro-website = pkgs.callPackage ./nix/package.nix { };
+      });
 
-      formatter = forAllSystems (
-        system:
-        let
-          pkgs = import nixpkgs { inherit system; };
-        in
-        pkgs.nixfmt-tree
-      );
+      devShells = forAllSystems (pkgs: {
+        default = pkgs.callPackage ./nix/shell.nix { };
+      });
     };
 }

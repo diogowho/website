@@ -1,10 +1,13 @@
 default: build
 
 build:
-  pnpm run build
+  npm run build
 
 dev:
-  pnpm run dev
+  npm run dev
+
+nix: 
+  nix build -L
 
 format:
-  pnpm exec prettier . --write
+  nix run nixpkgs#prettier -- --write .
