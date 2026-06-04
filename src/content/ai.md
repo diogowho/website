@@ -1,7 +1,7 @@
 ---
-layout: ../layouts/Content.astro
-title: AI
-showBackLink: true
+title: "AI"
+description: "My thoughts on AI, how I use it, and my chosen tool"
+lastUpdated: "2026-06-04"
 ---
 
 ## My Thoughts

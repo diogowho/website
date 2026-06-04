@@ -1,103 +1,75 @@
 ---
-import Layout from "../layouts/Default.astro";
-import pkg from "../../package.json";
-
-const astroVersion = pkg.dependencies.astro.replace(/^[^0-9]+/, "");
-
-const pages: { name: string; url: string }[] = [
-  { name: "AS207118", url: "https://as207118.net" },
-  { name: "Privacy", url: "/privacy" },
-  { name: "Transparency", url: "/transparency" },
-  { name: "AI", url: "/ai" },
-  { name: "Uses", url: "/uses" },
-];
-
-const socials: { name: string; url: string; title?: string }[] = [
-  { name: "Codeberg", url: "https://codeberg.org/diogocastro" },
-  {
-    name: "Fedi",
-    url: "https://dissociat.ing/@iz",
-  },
-  {
-    name: "Steam",
-    url: "https://steamcommunity.com/profiles/76561198950840617",
-  },
-  { name: "Email", url: "mailto:website@diogocastro.net" },
-  {
-    name: "Signal",
-    url: "https://signal.me/#eu/fsBt9oTZ4lxcqA7hHvjot1ft2C91k6ysxLETTqMYf5VECufwnq9C_YlbMkIlQ4ra",
-  },
-  {
-    name: "Matrix",
-    url: "https://matrix.to/#/@iz:skji.org",
-  },
-];
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import { SELF, SOCIALS } from "../consts";
+import Link from "../components/Link.astro";
 ---
 
-<Layout title="Diogo Castro">
-  <header
-    slot="header"
-    class="mb-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center"
-  >
-    <img
-      src="https://codeberg.org/diogocastro.png"
-      alt="diogo castro"
-      class="h-20 w-20 rounded-full"
-    />
-    <h1 class="font-pecita text-2xl tracking-tighter">Diogo Castro</h1>
-  </header>
+<Layout description="Diogo's chaotic corner of the web.">
+  <Container>
+    <aside>
+      <div class="flex items-center gap-x-4">
+        <img
+          src="https://codeberg.org/diogocastro.png"
+          alt={`${SELF.name}'s profile picture on Codeberg`}
+          class="h-20 w-20 rounded-full"
+        />
+        <h1
+          class="font-pecita text-3xl font-semibold text-black dark:text-white"
+        >
+          Diogo Castro
+        </h1>
+      </div>
+      <div class="space-y-12">
+        <section>
+          <article class="space-y-4">
+            <span>
+              <p>
+                Computer science undergraduate at the <Link
+                  href="https://estsetubal.ips.pt/"
+                  >Polytechnic Institute of Setúbal</Link
+                >. When I'm not having classes, I'm usually messing with
+                computers, networking, learning new things, shitposting or
+                lurking online.
+              </p>
+              <p>
+                I started writing code at the age of 9, and have been passionate
+                about tech ever since. I also enjoy gaming casually.
+              </p>
+            </span>
+          </article>
+        </section>
 
-  <section class="mb-8">
-    <p class="mb-2">
-      Computer science undergraduate at the <a
-        href="https://estsetubal.ips.pt/"
-        class="text-inherit underline decoration-1 hover:no-underline"
-        >Polytechnic Institute of Setúbal</a
-      >. When I'm not having classes, I'm usually messing with computers,
-      networking, learning new things, shitposting or lurking online.
-    </p>
-
-    <p class="mb-4">
-      I started writing code at the age of 9, and have been passionate about
-      tech ever since. I also enjoy gaming casually.
-    </p>
-  </section>
-
-  <section class="mb-8">
-    <h2 class="mb-2 text-base font-bold text-[#888888]">Pages</h2>
-    <nav class="flex flex-wrap gap-4">
-      {
-        pages.map((page) => (
-          <a
-            href={page.url}
-            class="text-inherit underline decoration-1 hover:no-underline"
-          >
-            {page.name}
-          </a>
-        ))
-      }
-    </nav>
-  </section>
-
-  <section class="mb-8">
-    <h2 class="mb-2 text-base font-bold text-[#888888]">Socials</h2>
-    <nav class="flex flex-wrap gap-4">
-      {
-        socials.map((social) => (
-          <a
-            href={social.url}
-            rel="noopener noreferrer"
-            title={social.title ? social.title : undefined}
-            class="text-inherit underline decoration-1 hover:no-underline"
-          >
-            {social.name}
-          </a>
-        ))
-      }
-    </nav>
-  </section>
-
-  <footer class="text-[10px] text-[#888888]">
-    <p>Astro v{astroVersion}</p>
-  </footer>
+        <section class="animate space-y-4">
+          <h2 class="font-semibold text-black dark:text-white">
+            You can find me on:
+          </h2>
+          <ul class="not-prose flex flex-wrap gap-2">
+            {
+              SOCIALS.map((SOCIAL) => (
+                <li class="flex gap-x-2 text-nowrap">
+                  <Link
+                    href={SOCIAL.href}
+                    external
+                    aria-label={`${SELF.name} on ${SOCIAL.name}`}
+                  >
+                    {SOCIAL.name}
+                  </Link>
+                  {"/"}
+                </li>
+              ))
+            }
+            <li class="line-clamp-1">
+              <Link
+                href={`mailto:${SELF.email}`}
+                aria-label={`Email ${SELF.name}`}
+              >
+                Email
+              </Link>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </aside>
+  </Container>
 </Layout>

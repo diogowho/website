@@ -1,0 +1,21 @@
+---
+import Container from "./Container.astro";
+import { SELF } from "../consts";
+import BackToTop from "./BackToTop.astro";
+
+import pkg from "../../package.json";
+const astroVersion = pkg.dependencies.astro.replace(/^[^0-9]+/, "");
+---
+
+<footer class="animate">
+  <Container>
+    <div class="relative">
+      <div class="absolute -top-12 right-0">
+        <BackToTop />
+      </div>
+    </div>
+    <div class="flex items-center justify-between">
+      <div>Made with 💜 by {SELF.name} using Astro v{astroVersion}</div>
+    </div>
+  </Container>
+</footer>

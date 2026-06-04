@@ -1,0 +1,54 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import { readingTime } from "../lib/utils";
+
+export async function getStaticPaths() {
+  const documents = await getCollection("content");
+  return documents.map((doc) => ({
+    params: { contentId: doc.id },
+    props: doc,
+  }));
+}
+
+type Props = CollectionEntry<"content">;
+
+const documents = await getCollection("content");
+const document = Astro.props;
+const { Content } = await render(document);
+---
+
+<Layout title={document.data.title} description={document.data.description}>
+  <Container>
+    <div class="space-y-1">
+      <div class="animate flex items-center gap-1.5">
+        {
+          document.data.lastUpdated && (
+            <div class="font-base text-sm">
+              <FormattedDate date={document.data.lastUpdated} />
+            </div>
+            <span>
+                &bull;
+            </span>
+          )
+        }
+        {
+          document.body && (
+            <div class="font-base text-sm">{readingTime(document.body)}</div>
+          )
+        }
+      </div>
+      <h1 class="animate text-3xl font-semibold text-black dark:text-white">
+        {document.data.title}
+      </h1>
+      <h3 class="animate text-xl text-black/60 dark:text-white/80">
+        {document.data.description}
+      </h3>
+    </div>
+    <article class="animate">
+      <Content />
+    </article>
+  </Container>
+</Layout>

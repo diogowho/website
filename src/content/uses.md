@@ -1,14 +1,8 @@
 ---
-layout: ../layouts/Content.astro
-title: Uses
-showBackLink: true
+title: "Uses"
+description: "A list of the hardware, software, and services I use regularly."
+lastUpdated: "2026-06-04"
 ---
-
-A long list of the hardware, software, and services I use regularly.
-
-This is not ordered in any specific order.
-
-Referral links are clearly identified.
 
 ## Hardware
 
@@ -17,6 +11,8 @@ Referral links are clearly identified.
 - **Apple Watch (S11)**: fitness tracking, notifications and health monitoring
 - **iPad Air (M2)**: for note-taking, light gaming and sketching
 - **AirPods Pro (2nd gen)**: for listening to music on the go
+
+---
 
 ## Software
 
@@ -28,6 +24,7 @@ Referral links are clearly identified.
 - [**SponsorBlock**](https://sponsor.ajay.app/): skips sponsored content on YouTube
 - [**Userscripts**](https://github.com/quoid/userscripts)
 - [**Return YouTube Dislike**](https://returnyoutubedislike.com/): returns the dislike count on YouTube
+- [**Noir**](https://getnoir.app): dark mode for websites without it
 
 ### Communication
 
@@ -35,7 +32,7 @@ Referral links are clearly identified.
 - [**Element**](https://element.io/): Matrix-based messaging
 - [**Vesktop**](https://vesktop.dev/): custom Discord client (unfortunately a lot of my peers still use and refuse to ditch Discord)
 - [**WhatsApp**](https://whatsapp.com/): sadly everyone I know IRL uses this for everything and unless I cut 99% of the people from my life I have to deal with it
-- **iMessage**
+- **iMessage**: my favourite messaging app
 
 ### Development
 
@@ -87,9 +84,9 @@ Referral links are clearly identified.
 
 ## Services
 
-- [**Codeberg**](https://codeberg.org): open source and privacy-focused git forge
-- [**Bunny**](https://bunny.net): european content delivery network ([_referral link_](https://diogocastro.net/bunny))
+- [**Codeberg**](https://codeberg.org): open source and privacy-focused Git forge based on Forgejo
+- [**Bunny**](https://bunny.net): european content delivery network
 - [**Kagi**](https://kagi.com): privacy-respecting search engine
 - [**Steam**](https://steampowered.com/): world's greatest gaming platform
 - [**SteamDB**](https://steamdb.info/): Steam game database and analytics
-- [**bgp.tools**](https://bgp.tools/): nice bgp tools
+- [**bgp.tools**](https://bgp.tools/)
