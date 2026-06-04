@@ -8,21 +8,18 @@ import { SELF } from "../consts";
   <Container>
     <div class="flex flex-wrap justify-between gap-y-2">
       <Link href="/" underline={false}>
-        <div class="font-semibold">
-          {SELF.name}
-        </div>
+        {
+          Astro.url.pathname !== "/" && (
+            <div class="font-semibold">{SELF.name}</div>
+          )
+        }
       </Link>
       <nav class="flex items-center gap-1 text-sm">
         <Link href="https://as207118.net">as207118</Link>
-        <span>{`/`}</span>
         <Link href="/uses">uses</Link>
-        <span>{`/`}</span>
         <Link href="/privacy">privacy</Link>
-        <span>{`/`}</span>
         <Link href="/transparency">transparency</Link>
-        <span>{`/`}</span>
         <Link href="/ai">ai</Link>
-        <span>{`/`}</span>
         <Link href="https://flake.diogocastro.net">flake</Link>
       </nav>
     </div>
