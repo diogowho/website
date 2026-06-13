@@ -12,81 +12,88 @@ lastUpdated: "2026-06-04"
 - **iPad Air (M2)**: for note-taking, light gaming and sketching
 - **AirPods Pro (2nd gen)**: for listening to music on the go
 
+*yes, I'm an Apple sheep hehe*
+
 ---
 
 ## Software
 
 ### Browser & Extensions
 
-- **Safari**: I don't require much from a browser, iCloud sync is great and it just works
+- **Safari**: my browser of choice, iCloud sync is great and it just works
 - [**Wipr 2**](https://kaylees.site/wipr2.html): lightweight content blocker
-- [**Sink It**](https://gosinkit.com/): better Reddit experience
-- [**SponsorBlock**](https://sponsor.ajay.app/): skips sponsored content on YouTube
-- [**Userscripts**](https://github.com/quoid/userscripts)
-- [**Return YouTube Dislike**](https://returnyoutubedislike.com/): returns the dislike count on YouTube
-- [**Noir**](https://getnoir.app): dark mode for websites without it
+- [**Sink It**](https://gosinkit.com/): better Reddit experience 
+- [**SponsorBlock**](https://sponsor.ajay.app/): skips sponsored segments on YouTube videos
+- [**Userscripts**](https://github.com/quoid/userscripts): userscript manager
+- [**Return YouTube Dislike**](https://returnyoutubedislike.com/): shows YouTube dislike counts
+- [**Noir**](https://getnoir.app): forces dark mode on websites that don't support it
 
 ### Communication
 
-- [**Signal**](https://signal.org): open-source encrypted messaging
-- [**Element**](https://element.io/): Matrix-based messaging
-- [**Vesktop**](https://vesktop.dev/): custom Discord client (unfortunately a lot of my peers still use and refuse to ditch Discord)
-- [**WhatsApp**](https://whatsapp.com/): sadly everyone I know IRL uses this for everything and unless I cut 99% of the people from my life I have to deal with it
-- **iMessage**: my favourite messaging app
+- [**Signal**](https://signal.org): open-source encrypted messaging app
+- [**Element**](https://element.io/): Matrix-based messaging client
+- [**Vesktop**](https://vesktop.dev/): custom Discord client (unfortunately most of my peers still use Discord and refuse to switch)
+- [**WhatsApp**](https://whatsapp.com/): everyone I know IRL uses this, so I have to deal with it
+- **iMessage**: my favorite messaging app
 
 ### Development
 
 - [**Ghostty**](https://ghostty.org/): feature-rich terminal emulator
-- [**Neovim**](https://neovim.org/): highly extensible text editor
+- [**Neovim**](https://neovim.org/): highly extensible text editor of choice
 - [**UTM**](https://mac.getutm.app/): lightweight, open-source virtual machine manager for Apple Silicon
-- [**Xcode**](https://developer.apple.com/xcode): Apple's integrated development environment
-- [**container**](https://github.com/apple/container): lightweight containers on macOS
+- [**Xcode**](https://developer.apple.com/xcode): Apple's IDE for macOS and iOS development
+- [**container**](https://github.com/apple/container): lightweight container runtime for macOS
 
 ### Productivity
 
-- [**AeroSpace**](https://github.com/nikitabobko/AeroSpace): macOS tiling window manager
-- **Spotlight**: macOS's native launcher (I've tried Alfred and Raycast, but Raycast is VC-funded and Spotlight just does the same as Alfred on Tahoe)
-- **Apple Notes**: I've tried a lot of note-taking apps and I keep coming back to Apple Notes, it's dead simple, and syncs across my devices
+- [**AeroSpace**](https://github.com/nikitabobko/AeroSpace): my macOS tiling window manager
+- **Spotlight**: macOS's native app launcher (I've tried Alfred and Raycast, but Raycast is VC-funded and Spotlight does everything I need)
+- **Pages**: Apple's word processor
+- **Keynote**: Apple's presentation software
+- **Numbers**: Apple's spreadsheet app
+- [**System Color Picker**](https://sindresorhus.com/system-color-picker): system-wide color picker for macOS
+- **Apple Notes**: I've tried many note-taking apps but always come back to Apple Notes - it's simple and syncs perfectly across my devices
 - **Apple Reminders**: same reason as Notes
 - **Apple Calendar**: same reason as Reminders
-- [**Actions**](https://sindresorhus.com/actions): adds more actions to Apple shortcuts
-- [**HazeOver**](https://hazeover.com/): dims distractions
+- [**Actions**](https://sindresorhus.com/actions): extends Apple Shortcuts with more actions
+- [**HazeOver**](https://hazeover.com/): dims inactive windows to reduce distractions
 
 ### Media
 
-- [**NetNewsWire**](https://netnewswire.com/): rss reader
-- [**Apple Music**](https://www.apple.com/apple-music/): music streaming
+- [**NetNewsWire**](https://netnewswire.com/): my preferred RSS reader
+- [**Apple Music**](https://www.apple.com/apple-music/): music streaming service 
 - [**Sketch**](https://sketch.com/): design tool
 - **Apple Photos**: it just works
 - [**Pixelmator Pro**](https://www.apple.com/uk/pixelmator-pro/): photo editing
-- [**Procreate**](https://procreate.com/): drawing
+- [**Procreate**](https://procreate.com/): drawing app for iPad
 
 ### Utilities
 
 - **Apple Passwords**: Apple's built-in password manager that just works
-- [**Parcel**](https://parcel.app/): delivery tracker
+- [**Parcel**](https://parcel.app/): delivery tracking app
 - [**Rocket**](https://matthewpalmer.net/rocket/): emoji picker for macOS
-- [**Klack**](https://tryklack.com/): satisfying key sounds
-- [**Cryptomator**](https://cryptomator.org/): open source client-side file encryption
+- [**Klack**](https://tryklack.com/): satisfying key sounds 
+- [**Cryptomator**](https://cryptomator.org/): open-source client-side file encryption
+- [**Keka**](https://www.keka.io): archive extractor for macOS
+- [**Maccy**](https://maccy.app): clipboard manager (still not sure if this will stay in my workflow yet...)
 
 ### (Programming) Languages
 
-- **JavaScript**: my first-ever programming language and I still use it for web development
-- [**TypeScript**](https://www.typescriptlang.org/): typed superset of JavaScript
-- [**Swift**](https://www.swift.org/): programming language for iOS and macOS development
+- **JavaScript**: my first programming language, still my go-to for web development
+- [**TypeScript**](https://www.typescriptlang.org/): typed superset of JavaScript that I use for most projects
+- [**Swift**](https://www.swift.org/)
 
 ### System
 
 - [**Homebrew**](https://brew.sh): package manager for macOS
 - [**Nix**](https://nixos.org): purely functional package manager
-- [**nix-darwin**](https://github.com/nix-darwin/nix-darwin): manage macOS using Nix
+- [**nix-darwin**](https://github.com/nix-darwin/nix-darwin): manage macOS system configuration using Nix
 - [**home-manager**](https://github.com/nix-community/home-manager): manage user environment using Nix
 
 ## Services
 
-- [**Codeberg**](https://codeberg.org): open source and privacy-focused Git forge based on Forgejo
-- [**Bunny**](https://bunny.net): european content delivery network
-- [**Kagi**](https://kagi.com): privacy-respecting search engine
+- [**Codeberg**](https://codeberg.org): open-source and privacy-focused Git hosting service (based on Forgejo)
+- [**Bunny**](https://bunny.net): European content delivery network
 - [**Steam**](https://steampowered.com/): world's greatest gaming platform
 - [**SteamDB**](https://steamdb.info/): Steam game database and analytics
-- [**bgp.tools**](https://bgp.tools/)
+- [**bgp.tools**](https://bgp.tools/): BGP routing information tool
