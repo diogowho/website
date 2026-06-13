@@ -8,11 +8,7 @@ import { SELF } from "../consts";
   <Container>
     <div class="flex flex-wrap justify-between gap-y-2">
       <Link href="/" underline={false}>
-        {
-          Astro.url.pathname !== "/" && (
-            <div class="font-semibold">{SELF.name}</div>
-          )
-        }
+        <div class="font-semibold" id="name" data-hidden={Astro.url.pathname === "/"}>{SELF.name}</div>
       </Link>
       <nav class="flex items-center gap-1 text-sm">
         <Link href="https://as207118.net">as207118</Link>
@@ -25,3 +21,21 @@ import { SELF } from "../consts";
     </div>
   </Container>
 </header>
+
+<script>
+  document.addEventListener('astro:after-swap', () => {
+    const nameEl = document.getElementById('name');
+    const isHome = window.location.pathname === '/';
+    if (nameEl) {
+      nameEl.style.display = isHome ? 'none' : '';
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const nameEl = document.getElementById('name');
+    const isHome = window.location.pathname === '/';
+    if (nameEl) {
+      nameEl.style.display = isHome ? 'none' : '';
+    }
+  });
+</script>
