@@ -12,7 +12,7 @@ lastUpdated: "2026-06-04"
 - **iPad Air (M2)**: for note-taking, light gaming and sketching
 - **AirPods Pro (2nd gen)**: for listening to music on the go
 
-*yes, I'm an Apple sheep hehe*
+_yes, I'm an Apple sheep hehe_
 
 ---
 
@@ -22,7 +22,7 @@ lastUpdated: "2026-06-04"
 
 - **Safari**: my browser of choice, iCloud sync is great and it just works
 - [**Wipr 2**](https://kaylees.site/wipr2.html): lightweight content blocker
-- [**Sink It**](https://gosinkit.com/): better Reddit experience 
+- [**Sink It**](https://gosinkit.com/): better Reddit experience
 - [**SponsorBlock**](https://sponsor.ajay.app/): skips sponsored segments on YouTube videos
 - [**Userscripts**](https://github.com/quoid/userscripts): userscript manager
 - [**Return YouTube Dislike**](https://returnyoutubedislike.com/): shows YouTube dislike counts
@@ -61,7 +61,7 @@ lastUpdated: "2026-06-04"
 ### Media
 
 - [**NetNewsWire**](https://netnewswire.com/): my preferred RSS reader
-- [**Apple Music**](https://www.apple.com/apple-music/): music streaming service 
+- [**Apple Music**](https://www.apple.com/apple-music/): music streaming service
 - [**Sketch**](https://sketch.com/): design tool
 - **Apple Photos**: it just works
 - [**Pixelmator Pro**](https://www.apple.com/uk/pixelmator-pro/): photo editing
@@ -72,7 +72,7 @@ lastUpdated: "2026-06-04"
 - **Apple Passwords**: Apple's built-in password manager that just works
 - [**Parcel**](https://parcel.app/): delivery tracking app
 - [**Rocket**](https://matthewpalmer.net/rocket/): emoji picker for macOS
-- [**Klack**](https://tryklack.com/): satisfying key sounds 
+- [**Klack**](https://tryklack.com/): satisfying key sounds
 - [**Cryptomator**](https://cryptomator.org/): open-source client-side file encryption
 - [**Keka**](https://www.keka.io): archive extractor for macOS
 - [**Maccy**](https://maccy.app): clipboard manager (still not sure if this will stay in my workflow yet...)

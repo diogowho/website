@@ -28,10 +28,8 @@ const { Content } = await render(document);
           document.data.lastUpdated && (
             <div class="font-base text-sm">
               <FormattedDate date={document.data.lastUpdated} />
+              <span>&bull;</span>
             </div>
-            <span>
-                &bull;
-            </span>
           )
         }
         {
