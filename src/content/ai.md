@@ -1,32 +1,21 @@
 ---
 title: "AI"
 description: "My thoughts on AI, how I use it, and my chosen tool"
-lastUpdated: "2026-06-04"
+lastUpdated: "2026-06-19"
 ---
 
 ## My Thoughts
 
-AI is a tool, and like any tool, it can be used well or poorly.
+I see AI as a tool that can be incredibly useful or misused, depending on how it's applied. For me, AI is about enhancing what I can do, not replacing the human touch. It's a way to work more efficiently, not an excuse to work less.
 
-I think AI can be great augmenting human productivity, not replace it. My goal with it is to work smarter, not to work less.
+## What I Use AI For
 
-## What I use AI for
+I primarily use AI for tasks that are repetitive or tedious. If something feels like a chore, there's a good chance AI can take it off my plate, freeing me up to focus on what truly matters. It also helps me streamline my workflow, making me more effective without losing the personal, human element.
 
-- Automating repetitive tasks
-  If it's boring, or repetitive, AI can probably handle it. This frees up my time to focus on more important tasks.
-- Augmenting my workflow
-  AI helps me work smarter. Enhances my capabilities without replacing my human side.
+## What I Don't Use AI For
 
-## What I don't use AI for
+There are lines I won't cross. I'll never publish or use AI-generated content without thoroughly reviewing and understanding it first. I also won't present AI work as my own, if AI played a role, I'll make that clear. Beyond that, I won't use it to mislead, manipulate, or deceive anyone, and I'll always keep the final say on important decisions in human hands.
 
-- Publishing unchecked AI-generated content
-  I'll **never** publish or use AI without fully understanding, reviewing, and auditing it first.
-- Passing off AI-generated work as human
-  If AI had a hand in it, I'll clearly say so.
-- Misleading, manipulating, or deceiving people
-- Core decision-making
-  Major choices' final call are human.
+## My Chosen Tool
 
-## My chosen tool
-
-After evaluating various AI tools, my final decision was to use [Mistral](https://mistral.ai) as I've found it to be the most transparent, and ethical.
+After trying out a few options, I settled on [Mistral](https://mistral.ai) with [OpenCode](https://opencode.ai). They stood out to me as the most transparent and ethical choice.
