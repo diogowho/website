@@ -9,8 +9,8 @@ export const SOCIALS: { name: string; href: string }[] = [
     href: "https://codeberg.org/diogocastro",
   },
   {
-    name: "Fedi",
-    href: "https://dissociat.ing/@iz",
+    name: "Mastodon",
+    href: "https://hachyderm.io/@iz",
   },
   {
     name: "Steam",
