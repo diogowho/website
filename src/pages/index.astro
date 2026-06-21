@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
 import { SELF, SOCIALS } from "../consts";
 import Link from "../components/Link.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout description="Diogo's chaotic corner of the web.">
@@ -49,26 +50,22 @@ import Link from "../components/Link.astro";
           <ul class="not-prose flex flex-wrap gap-2">
             {
               SOCIALS.map((SOCIAL) => (
-                <li class="flex gap-x-2 text-nowrap">
+                <li>
                   <Link
                     href={SOCIAL.href}
                     external
                     rel="me"
                     aria-label={`${SELF.name} on ${SOCIAL.name}`}
+                    class="flex items-center gap-x-2 text-nowrap"
                   >
-                    {SOCIAL.name}
+                    {SOCIAL.icon && (
+                      <Icon name={SOCIAL.icon} class="mr-1 inline" />
+                    )}
+                    <span>{SOCIAL.name}</span>
                   </Link>
                 </li>
               ))
             }
-            <li class="line-clamp-1">
-              <Link
-                href={`mailto:${SELF.email}`}
-                aria-label={`Email ${SELF.name}`}
-              >
-                Email
-              </Link>
-            </li>
           </ul>
         </section>
       </div>
