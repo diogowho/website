@@ -1,0 +1,54 @@
+---
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "./FormattedDate.astro";
+
+type Props = {
+  entry: CollectionEntry<"posts">;
+};
+
+const { entry } = Astro.props as {
+  entry: CollectionEntry<"posts">;
+};
+---
+
+<a
+  href={`/${entry.collection}/${entry.id}`}
+  class="not-prose group relative -ml-2 flex flex-nowrap rounded-lg border border-transparent px-4 py-4 pr-12 pl-8 transition-all duration-300 ease-in-out hover:border-black/20 hover:bg-neutral-200/50 dark:hover:border-white/20 dark:hover:bg-neutral-800/50"
+>
+  <div
+    class="absolute top-1/2 left-0 h-8 w-1 -translate-y-1/2 rounded-r-full bg-black/20 transition-all duration-300 ease-in-out group-hover:w-2 group-hover:bg-black/40 dark:bg-white/20 dark:group-hover:bg-white/40"
+  >
+  </div>
+
+  <div class="flex flex-1 flex-col truncate">
+    <div
+      class="font-semibold text-black transition-colors duration-200 group-hover:text-black dark:text-white dark:group-hover:text-white"
+    >
+      {entry.data.title}
+    </div>
+    <div class="mt-1 text-sm text-black/60 dark:text-white/60">
+      {entry.data.description}
+    </div>
+    <div class="mt-2 text-xs text-black/40 dark:text-white/40">
+      <FormattedDate date={entry.data.pubDate} />
+    </div>
+  </div>
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    class="absolute top-1/2 right-4 size-5 -translate-y-1/2 fill-none stroke-current stroke-2 text-black/40 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:text-black dark:text-white/40 dark:group-hover:text-white"
+  >
+    <line
+      x1="5"
+      y1="12"
+      x2="19"
+      y2="12"
+      class="translate-x-3 scale-x-0 transition-transform duration-200 ease-in-out group-hover:translate-x-0 group-hover:scale-x-100"
+    ></line>
+    <polyline
+      points="12 5 19 12 12 19"
+      class="-translate-x-1 transition-transform duration-200 ease-in-out group-hover:translate-x-0"
+    ></polyline>
+  </svg>
+</a>
