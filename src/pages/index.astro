@@ -6,7 +6,7 @@ import Link from "../components/Link.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<Layout description="Diogo's chaotic corner of the web.">
+<Layout description=`${SELF.name.split(" ")[0]}'s chaotic corner of the web.`>
   <Container>
     <aside>
       <div class="flex items-center gap-x-4">
@@ -18,7 +18,7 @@ import { Icon } from "astro-icon/components";
         <h1
           class="font-pecita text-3xl font-semibold text-black dark:text-white"
         >
-          Diogo Castro
+          {SELF.name}
         </h1>
       </div>
       <div class="space-y-12">
