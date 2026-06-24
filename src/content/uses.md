@@ -1,16 +1,21 @@
 ---
 title: "Uses"
 description: "A list of the hardware, software, and services I use regularly."
-lastUpdated: "2026-06-04"
+lastUpdated: "2026-06-24"
 ---
 
 ## Hardware
 
 - **MacBook Pro (16-inch, M3 Pro, 18GB RAM, 512GB SSD)**: my daily driver
+- **MacBook Air (13-inch, M1, 8GB RAM, 256GB SSD)**: served me so well during high school and first year of uni, now it's used by my parents
 - **iPhone 15 Pro (128GB)**: my phone lul
 - **Apple Watch (S11)**: fitness tracking, notifications and health monitoring
 - **iPad Air (M2)**: for note-taking, light gaming and sketching
 - **AirPods Pro (2nd gen)**: for listening to music on the go
+- **Magic Mouse (USB-C)**: i know what you're going to say,,,, but I don't use a mouse often enough to complain about Magic Mouse _(+ its battery lasts long)_
+- **Magic Keyboard (USB-C, Touch ID)**: nothing to say for now, literally just got it lul
+- **EarPods (USB-C)**: works
+- **AOC 32G2WG8 Monitor (1080p, 240Hz, 32-inch)**: i've had this for sooo long, and because i'm so used to Apple displays it feels so meh (quality-wise)
 
 _yes, I'm an Apple sheep hehe_
 
