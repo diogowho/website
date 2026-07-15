@@ -1,0 +1,178 @@
+---
+import { Icon } from "astro-icon/components";
+
+const username = "izlul";
+const apiKey = "533fc54900ab8cec3ed4a2dc0b287b68"; // oh no! i leaked my api key!!! what am i gonna do???
+
+if (!username || !apiKey) return;
+---
+
+<section class="space-y-4">
+  <h2 class="flex items-center gap-2 font-semibold text-black dark:text-white">
+    <Icon name="mdi:lastfm" class="h-5 w-5" />Listening
+  </h2>
+
+  <div class="rounded-xl border border-neutral-200 p-4 dark:border-neutral-800">
+    <!-- Loading skeleton -->
+    <div
+      id="lastfm-loading"
+      class="flex animate-pulse items-center gap-4"
+      aria-label="Loading music data"
+    >
+      <div
+        class="h-20 w-20 shrink-0 rounded-lg bg-neutral-300 dark:bg-neutral-700"
+      >
+      </div>
+      <div class="flex-1 space-y-2.5">
+        <div class="h-4 w-44 rounded bg-neutral-300 dark:bg-neutral-700"></div>
+        <div class="h-3.5 w-32 rounded bg-neutral-300 dark:bg-neutral-700">
+        </div>
+        <div class="h-3.5 w-28 rounded bg-neutral-300 dark:bg-neutral-700">
+        </div>
+        <div class="h-3 w-24 rounded bg-neutral-300 dark:bg-neutral-700"></div>
+      </div>
+    </div>
+
+    <!-- Loaded content (hidden until JS populates it) -->
+    <a
+      id="lastfm-link"
+      href={`https://www.last.fm/user/${username}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      style="display: none;"
+      class="group flex items-center gap-4 no-underline"
+      aria-label="Now playing on Last.fm"
+    >
+      <div
+        class="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-neutral-300 dark:bg-neutral-700"
+      >
+        <img
+          id="lastfm-art"
+          src=""
+          alt=""
+          class="h-full w-full object-cover"
+          style="display: none;"
+        />
+        <div
+          id="lastfm-art-fallback"
+          class="flex h-full w-full items-center justify-center text-black/30 dark:text-white/30"
+        >
+          <Icon name="mdi:lastfm" class="h-7 w-7" />
+        </div>
+      </div>
+
+      <div class="min-w-0 flex-1">
+        <div class="flex items-center gap-2">
+          <span
+            id="lastfm-nowplaying-dot"
+            class="hidden h-2 w-2 shrink-0 animate-pulse rounded-full bg-red-500"
+            aria-label="Now playing"
+            title="Now playing"></span>
+          <span
+            id="lastfm-track"
+            class="truncate text-base font-semibold text-black transition-colors duration-300 group-hover:text-black dark:text-white dark:group-hover:text-white"
+          ></span>
+        </div>
+        <div id="lastfm-artist" class="truncate text-sm font-medium"></div>
+        <div id="lastfm-album" class="truncate text-sm opacity-60"></div>
+        <div id="lastfm-status" class="mt-1 text-xs opacity-50"></div>
+      </div>
+    </a>
+
+    <p id="lastfm-error" class="hidden text-sm opacity-50">
+      Couldn't load music data.
+    </p>
+  </div>
+</section>
+
+<script define:vars={{ username, apiKey }}>
+  const EMPTY_ART = "2a96cbd8b46e442fc41c2b86b821562f";
+  const API_URL = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json&limit=1`;
+  const REFRESH_MS = 30_000;
+
+  function relativeTime(unixTs) {
+    const diffSec = Math.round((Date.now() - Number(unixTs) * 1000) / 1000);
+    const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+    if (diffSec < 60) return rtf.format(-diffSec, "second");
+    if (diffSec < 3600) return rtf.format(-Math.floor(diffSec / 60), "minute");
+    if (diffSec < 86400) return rtf.format(-Math.floor(diffSec / 3600), "hour");
+    return rtf.format(-Math.floor(diffSec / 86400), "day");
+  }
+
+  let initialLoad = true;
+
+  async function loadLastFM() {
+    const loadingEl = document.getElementById("lastfm-loading");
+    const linkEl = document.getElementById("lastfm-link");
+    const artEl = document.getElementById("lastfm-art");
+    const artFallbackEl = document.getElementById("lastfm-art-fallback");
+    const trackEl = document.getElementById("lastfm-track");
+    const artistEl = document.getElementById("lastfm-artist");
+    const albumEl = document.getElementById("lastfm-album");
+    const statusEl = document.getElementById("lastfm-status");
+    const nowPlayingDot = document.getElementById("lastfm-nowplaying-dot");
+    const errorEl = document.getElementById("lastfm-error");
+
+    try {
+      const res = await fetch(API_URL);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+
+      const track = data?.recenttracks?.track?.[0];
+      if (!track) throw new Error("No track data");
+
+      const isNowPlaying = track["@attr"]?.nowplaying === "true";
+      const name = track.name;
+      const artist = track.artist?.["#text"] ?? "";
+      const album = track.album?.["#text"] ?? "";
+      const url = track.url;
+      const imageUrl =
+        track.image?.find((i) => i.size === "extralarge")?.["#text"] ??
+        track.image?.find((i) => i.size === "large")?.["#text"] ??
+        "";
+
+      trackEl.textContent = name;
+      artistEl.textContent = artist;
+      albumEl.textContent = album && album !== name ? album : "";
+      linkEl.href = url || linkEl.href;
+      linkEl.setAttribute("aria-label", `${name} by ${artist} on Last.fm`);
+
+      const hasArt = imageUrl && !imageUrl.includes(EMPTY_ART);
+      if (hasArt) {
+        artEl.src = imageUrl;
+        artEl.alt = `${name} album art`;
+        artEl.style.display = "block";
+        artFallbackEl.style.display = "none";
+      } else {
+        artEl.style.display = "none";
+        artFallbackEl.style.display = "flex";
+      }
+
+      if (isNowPlaying) {
+        nowPlayingDot.classList.remove("hidden");
+        statusEl.textContent = "Now playing";
+      } else {
+        nowPlayingDot.classList.add("hidden");
+        const ts = track.date?.uts;
+        statusEl.textContent = ts
+          ? `Last played ${relativeTime(ts)}`
+          : "Recently played";
+      }
+
+      if (initialLoad) {
+        loadingEl.style.display = "none";
+        linkEl.style.display = "flex";
+        initialLoad = false;
+      }
+    } catch {
+      if (initialLoad) {
+        loadingEl.style.display = "none";
+        errorEl.classList.remove("hidden");
+        initialLoad = false;
+      }
+    }
+  }
+
+  loadLastFM();
+  setInterval(loadLastFM, REFRESH_MS);
+</script>

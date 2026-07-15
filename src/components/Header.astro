@@ -1,0 +1,37 @@
+---
+import Container from "./Container.astro";
+import Link from "./Link.astro";
+import { SELF } from "../consts";
+---
+
+<header>
+  <Container>
+    <div class="flex flex-wrap justify-between gap-y-2">
+      <Link href="/" underline={false}>
+        <div
+          class="font-semibold"
+          id="name"
+          style={Astro.url.pathname === "/" ? "display: none;" : ""}
+        >
+          {SELF.name}
+        </div>
+      </Link>
+      <nav class="flex items-center gap-1 text-sm">
+        <Link href="/uses">uses</Link>
+        <Link href="/privacy">privacy</Link>
+        <Link href="/transparency">transparency</Link>
+        <Link href="/ai">ai</Link>
+      </nav>
+    </div>
+  </Container>
+</header>
+
+<script>
+  document.addEventListener("astro:after-swap", () => {
+    const nameEl = document.getElementById("name");
+    const isHome = window.location.pathname === "/";
+    if (nameEl) {
+      nameEl.style.display = isHome ? "none" : "";
+    }
+  });
+</script>

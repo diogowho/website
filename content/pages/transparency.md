@@ -1,7 +1,5 @@
 ---
-layout: ../layouts/Content.astro
-title: Transparency
-showBackLink: true
+title: "Transparency"
 ---
 
 Transparency is one of the values (alongside with ethics) I've come to start valuing more. When I choose a new software, services, tools, or even how I engage with people, I look for honesty and openness, even if it costs me more time or more money.

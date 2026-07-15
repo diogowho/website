@@ -1,0 +1,38 @@
+---
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SELF } from "../consts";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" style="color-scheme: light dark;">
+  <head>
+    <Head
+      title={title ? `${title} | ${SELF.name}` : SELF.name}
+      description={description ? description : ""}
+    />
+  </head>
+  <body>
+    <noscript>
+      <style>
+        .animate {
+          opacity: 1;
+          translate: var(--tw-translate-x) calc(var(--spacing) * 0);
+        }
+      </style>
+    </noscript>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

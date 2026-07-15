@@ -1,7 +1,7 @@
 ---
-layout: ../layouts/Content.astro
-title: Privacy Policy
-showBackLink: true
+title: "Privacy Policy"
+description: "This document outlines how I handle your data and privacy."
+lastUpdated: "2026-06-04"
 ---
 
 ## TL;DR
