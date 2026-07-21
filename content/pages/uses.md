@@ -1,7 +1,7 @@
 ---
 title: "Uses"
 description: "A list of the hardware, software, and services I use regularly."
-lastUpdated: "2026-07-15"
+lastUpdated: "2026-07-21"
 ---
 
 ## Hardware
@@ -11,11 +11,11 @@ lastUpdated: "2026-07-15"
 - **Apple Watch (S11)**: fitness tracking, notifications and health monitoring
 - **iPad Air (M2)**: for note-taking, light gaming and sketching
 - **Apple Pencil Pro**
-- **AirPods Pro (3rd gen)**: used to own the 2nd gen pro's and the 3rd gen fits my ears so much better
-- **Magic Mouse (USB-C)**: i know what you're going to say,,,, but I don't use a mouse often enough to complain about Magic Mouse _(+ its battery lasts)_
+- **AirPods Pro (3rd gen)**: used to own the 2nd gen pro's, the 3rd gen fits my ears so much better
+- **Magic Mouse (USB-C)**: good battery + gestures
 - **Magic Keyboard (USB-C, Touch ID)**: would love it even more if it had backlight!
 - **EarPods (USB-C)**
-- **AOC 32G2WG8 Monitor (1080p, 240Hz, 32-inch)**: i've had this for sooo long, and because i'm so used to Apple displays, it now feels meh (quality-wise)
+- **AOC 32G2WG8 Monitor (1080p, 240Hz, 32-inch)**: bruv quality
 
 _yes, I'm an Apple sheep hehe_
 
@@ -25,7 +25,23 @@ _yes, I'm an Apple sheep hehe_
 
 ### Browser & Extensions
 
-- **Safari**: my browser of choice, iCloud sync is great and it just works
+I currently [**Firefox**](https://www.firefox.com) on the desktop with these extensions:
+
+- [ClearURLs](https://docs.clearurls.xyz/): remove tracking elements from URLs
+- [Consent-O-Matic](https://github.com/cavi-au/Consent-O-Matic): automatically fills out cookie popups
+- [Port Authority](https://github.com/ACK-J/Port_Authority): prevents websites from port scanning
+- [**Return YouTube Dislike**](https://returnyoutubedislike.com/): shows YouTube dislike counts
+- [**Sink It**](https://gosinkit.com/): better Reddit experience
+- [**SponsorBlock**](https://sponsor.ajay.app/): skips sponsored segments on YouTube videos
+- [SteamDB](https://steamdb.info/extension/): SteamDB features on Steam web.
+- [Stylus](https://github.com/openstyles/stylus): userstyles manager
+- [uBlock Origin](https://github.com/gorhill/uBlock): efficient blocker
+- [Violentmonkey](https://violentmonkey.github.io/): open-source userscript manager
+
+<details>
+<summary><b>Safari</b></summary>
+Safari was, for a long time, my main browser (still is on iOS/iPadOS). Paired with the following extensions:
+
 - [**Wipr 2**](https://kaylees.site/wipr2.html): lightweight content blocker
 - [**Sink It**](https://gosinkit.com/): better Reddit experience
 - [**SponsorBlock**](https://sponsor.ajay.app/): skips sponsored segments on YouTube videos
@@ -34,6 +50,7 @@ _yes, I'm an Apple sheep hehe_
 - [**Noir**](https://getnoir.app): forces dark mode on websites that don't support it
 - [**Vinegar**](https://andadinosaur.com/launch-vinegar): replaces YouTube's player with a mininal HTML `<video>` tag
 - [**Vimari**](https://apps.apple.com/pt/app/vimari/id1480933944): vim bindings on safari
+</details>
 
 ### Communication
 
@@ -53,11 +70,9 @@ _yes, I'm an Apple sheep hehe_
 
 ### Productivity
 
-- [**AeroSpace**](https://github.com/nikitabobko/AeroSpace): my macOS tiling window manager
+- [**AeroSpace**](https://github.com/nikitabobko/AeroSpace): macOS tiling window manager
 - **Spotlight**: macOS's native app launcher
 - **Pages**: Apple's word processor
-- **Keynote**: Apple's presentation software
-- **Numbers**: Apple's spreadsheet app
 - [**System Color Picker**](https://sindresorhus.com/system-color-picker): system-wide color picker for macOS
 - **Apple Notes**: it's simple and syncs perfectly across my devices
 - **Apple Reminders**: same reason as Notes
@@ -77,13 +92,14 @@ _yes, I'm an Apple sheep hehe_
 ### Utilities
 
 - **Apple Passwords**: Apple's built-in password manager that just works
+- **Bitwarden**: open-source password manager
 - [**Parcel**](https://parcel.app/): delivery tracking app
 - [**Rocket**](https://matthewpalmer.net/rocket/): emoji picker for macOS
 - [**Klack**](https://tryklack.com/): satisfying key sounds
 - [**Cryptomator**](https://cryptomator.org/): open-source client-side file encryption
-- [**Keka**](https://www.keka.io): archive extractor for macOS
-- [**Maccy**](https://maccy.app): clipboard manager (still not sure if this will stay in my workflow yet...)
-- [**Mole**](https://github.com/tw93/Mole): simple Mac cleaner
+- [**Keka**](https://www.keka.io): open-source archive extractor for macOS
+- [**Maccy**](https://maccy.app): open-source clipboard manager
+- [**Mole**](https://github.com/tw93/Mole): open-source simple Mac cleaner
 
 ### (Programming) Languages
 
