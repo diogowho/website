@@ -30,6 +30,11 @@ export const SOCIALS: { name: string; href: string; icon?: string }[] = [
     icon: "simple-icons:matrix",
   },
   {
+    name: "Last.fm",
+    href: "https://www.last.fm/user/izlul",
+    icon: "mdi:lastfm",
+  },
+  {
     name: "Email",
     href: `mailto:${SELF.email}`,
     icon: "mdi:email",
