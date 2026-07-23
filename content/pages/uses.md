@@ -1,7 +1,7 @@
 ---
 title: "Uses"
 description: "A list of the hardware, software, and services I use regularly."
-lastUpdated: "2026-07-21"
+lastUpdated: "2026-07-23"
 ---
 
 ## Hardware
@@ -91,6 +91,7 @@ Safari was, for a long time, my main browser (still is on iOS/iPadOS). Paired wi
 
 ### Utilities
 
+- [**Homebrew**](https://brew.sh): package manager for macOS
 - **Apple Passwords**: Apple's built-in password manager that just works
 - **Bitwarden**: open-source password manager
 - [**Parcel**](https://parcel.app/): delivery tracking app
@@ -106,17 +107,3 @@ Safari was, for a long time, my main browser (still is on iOS/iPadOS). Paired wi
 - **JavaScript**: my first programming language, still my go-to for web development
 - [**TypeScript**](https://www.typescriptlang.org/): typed superset of JavaScript that I use for most projects
 - [**Swift**](https://www.swift.org/)
-
-### System
-
-- [**Homebrew**](https://brew.sh): package manager for macOS
-- [**Nix**](https://nixos.org): purely functional package manager
-
-## Services
-
-- [**Codeberg**](https://codeberg.org): transparent and privacy-focused hosted Git (based on Forgejo)
-- [**Bunny**](https://bunny.net): European content delivery network
-- [**Steam**](https://steampowered.com/): world's greatest gaming platform
-- [**SteamDB**](https://steamdb.info/): Steam game database and analytics
-- [**bgp.tools**](https://bgp.tools/): BGP routing information tool
-- [**git-pages**](https://git-pages.org/): static website hosting
