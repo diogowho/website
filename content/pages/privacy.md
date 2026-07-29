@@ -1,7 +1,7 @@
 ---
 title: "Privacy Policy"
 description: "This document outlines how I handle your data and privacy."
-lastUpdated: "2026-07-23"
+lastUpdated: "2026-07-29"
 ---
 
 ## TL;DR
@@ -14,13 +14,15 @@ I don't collect your data. At all.
 
 **Cloudflare**: I use Cloudflare's DNS and CDN. They may log basic request metadata (IP address, User-Agent, timestamps) purely to provide those services and protect against abuse. You can read their full policy [here](https://www.cloudflare.com/policies/privacy/).
 
+**Last.fm**: The homepage contacts the Last.fm API to fetch and display the currently listening/last listened music widget. Last.fm's privacy policy can be found [here](https://www.last.fm/legal/privacy).
+
 ## What This Means For You
 
-You're not being tracked, profiled, or sold to. The only logs are the generic ones Cloudflare handles.
+You're not being tracked, profiled, or sold to. The only logs are the generic ones Cloudflare handles, and the music widget fetches data from Last.fm.
 
 ## Changes
 
-If I ever change this, I'll update this page.
+Updates to this policy will be reflected here immediately.
 
 ## Questions
 
