@@ -1,7 +1,7 @@
 ---
 title: "Uses"
 description: "A list of the hardware, software, and services I use regularly."
-lastUpdated: "2026-07-23"
+lastUpdated: "2026-07-29"
 ---
 
 ## Hardware
@@ -93,7 +93,7 @@ Safari was, for a long time, my main browser (still is on iOS/iPadOS). Paired wi
 
 - [**Homebrew**](https://brew.sh): package manager for macOS
 - **Apple Passwords**: Apple's built-in password manager that just works
-- **Bitwarden**: open-source password manager
+- **[KeePassXC](https://keepassxc.org/)**: open-source, cross-platform password manager
 - [**Parcel**](https://parcel.app/): delivery tracking app
 - [**Rocket**](https://matthewpalmer.net/rocket/): emoji picker for macOS
 - [**Klack**](https://tryklack.com/): satisfying key sounds
