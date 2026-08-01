@@ -1,7 +1,7 @@
 ---
 title: "Uses"
 description: "A list of the hardware, software, and services I use regularly."
-lastUpdated: "2026-07-29"
+lastUpdated: "2026-08-01"
 ---
 
 ## Hardware
@@ -25,18 +25,17 @@ _yes, I'm an Apple sheep hehe_
 
 ### Browser & Extensions
 
-I currently [**Firefox**](https://www.firefox.com) on the desktop with these extensions:
+I currently use [**Dia**](https://www.diabrowser.com/) _(not the best for privacy but I love the UI/UX)_ with these extensions:
 
-- [ClearURLs](https://docs.clearurls.xyz/): remove tracking elements from URLs
-- [Consent-O-Matic](https://github.com/cavi-au/Consent-O-Matic): automatically fills out cookie popups
-- [Port Authority](https://github.com/ACK-J/Port_Authority): prevents websites from port scanning
+- [**ClearURLs**](https://docs.clearurls.xyz/): remove tracking elements from URLs
 - [**Return YouTube Dislike**](https://returnyoutubedislike.com/): shows YouTube dislike counts
 - [**Sink It**](https://gosinkit.com/): better Reddit experience
 - [**SponsorBlock**](https://sponsor.ajay.app/): skips sponsored segments on YouTube videos
-- [SteamDB](https://steamdb.info/extension/): SteamDB features on Steam web.
-- [Stylus](https://github.com/openstyles/stylus): userstyles manager
-- [uBlock Origin](https://github.com/gorhill/uBlock): efficient blocker
-- [Violentmonkey](https://violentmonkey.github.io/): open-source userscript manager
+- [**SteamDB**](https://steamdb.info/extension/): SteamDB features on Steam web
+- [**Stylus**](https://github.com/openstyles/stylus): userstyles manager
+- [**uBlock Origin**](https://github.com/gorhill/uBlock): efficient blocker
+- [**Violentmonkey**](https://violentmonkey.github.io/): open-source userscript manager
+- [**bleh**](https://github.com/katelyynn/bleh): pleasant last.fm ux
 
 <details>
 <summary><b>Safari</b></summary>
@@ -88,18 +87,18 @@ Safari was, for a long time, my main browser (still is on iOS/iPadOS). Paired wi
 - **Apple Photos**: it just works
 - [**Pixelmator Pro**](https://www.apple.com/uk/pixelmator-pro/): photo editing
 - [**Procreate**](https://procreate.com/): drawing app for iPad
+- [**ScrobbleKit**](/scrobblekit): my own open-source last.fm scrobbler for macOS and iOS
 
 ### Utilities
 
 - [**Homebrew**](https://brew.sh): package manager for macOS
 - **Apple Passwords**: Apple's built-in password manager that just works
-- **[KeePassXC](https://keepassxc.org/)**: open-source, cross-platform password manager
+- [**KeePassXC**](https://keepassxc.org/)**: open-source, cross-platform password manager
 - [**Parcel**](https://parcel.app/): delivery tracking app
 - [**Rocket**](https://matthewpalmer.net/rocket/): emoji picker for macOS
 - [**Klack**](https://tryklack.com/): satisfying key sounds
 - [**Cryptomator**](https://cryptomator.org/): open-source client-side file encryption
 - [**Keka**](https://www.keka.io): open-source archive extractor for macOS
-- [**Maccy**](https://maccy.app): open-source clipboard manager
 - [**Mole**](https://github.com/tw93/Mole): open-source simple Mac cleaner
 
 ### (Programming) Languages
