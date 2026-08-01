@@ -25,15 +25,15 @@ _yes, I'm an Apple sheep hehe_
 
 ### Browser & Extensions
 
-I currently use [**Dia**](https://www.diabrowser.com/) _(not the best for privacy but I love the UI/UX)_ with these extensions:
+I currently use [**Helium**](https://helium.computer/) with these extensions:
 
+- [**uBlock Origin**](https://github.com/gorhill/uBlock): efficient blocker
 - [**ClearURLs**](https://docs.clearurls.xyz/): remove tracking elements from URLs
 - [**Return YouTube Dislike**](https://returnyoutubedislike.com/): shows YouTube dislike counts
 - [**Sink It**](https://gosinkit.com/): better Reddit experience
 - [**SponsorBlock**](https://sponsor.ajay.app/): skips sponsored segments on YouTube videos
 - [**SteamDB**](https://steamdb.info/extension/): SteamDB features on Steam web
 - [**Stylus**](https://github.com/openstyles/stylus): userstyles manager
-- [**uBlock Origin**](https://github.com/gorhill/uBlock): efficient blocker
 - [**Violentmonkey**](https://violentmonkey.github.io/): open-source userscript manager
 - [**bleh**](https://github.com/katelyynn/bleh): pleasant last.fm ux
 
