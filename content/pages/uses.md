@@ -93,7 +93,7 @@ Safari was, for a long time, my main browser (still is on iOS/iPadOS). Paired wi
 
 - [**Homebrew**](https://brew.sh): package manager for macOS
 - **Apple Passwords**: Apple's built-in password manager that just works
-- [**KeePassXC**](https://keepassxc.org/)**: open-source, cross-platform password manager
+- [**KeePassXC**](https://keepassxc.org/): open-source, cross-platform password manager
 - [**Parcel**](https://parcel.app/): delivery tracking app
 - [**Rocket**](https://matthewpalmer.net/rocket/): emoji picker for macOS
 - [**Klack**](https://tryklack.com/): satisfying key sounds

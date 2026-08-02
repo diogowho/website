@@ -5,6 +5,11 @@ export const SELF: { name: string; email: string } = {
 
 export const SOCIALS: { name: string; href: string; icon?: string }[] = [
   {
+    name: "GitHub",
+    href: "https://github.com/diogowho",
+    icon: "mdi:github",
+  },
+  {
     name: "Codeberg",
     href: "https://codeberg.org/diogocastro",
     icon: "devicon-plain:codeberg",
