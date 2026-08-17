@@ -6,8 +6,12 @@ build:
 dev:
   npm run dev
 
-nix: 
-  nix build -L
-
 format:
-  nix run nixpkgs#prettier -- --write .
+  prettier --write .
+
+upgrade:
+  npx @astrojs/upgrade
+
+deploy:
+  just build
+  wrangler deploy
