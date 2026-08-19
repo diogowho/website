@@ -1,7 +1,7 @@
 ---
 title: "Uses"
 description: "A list of the hardware, software, and services I use regularly."
-lastUpdated: "2026-08-11"
+lastUpdated: "2026-08-19"
 ---
 
 ## Hardware
@@ -44,7 +44,7 @@ I currently use [**Helium**](https://helium.computer/) with these extensions:
 
 ### Development
 
-- [**Ghostty**](https://ghostty.org/): feature-rich terminal emulator
+- [**iTerm2**](https://iterm2.com/): macOS-native terminal emulator
 - [**Neovim**](https://neovim.org/) _(btw)_: highly extensible text editor of choice
 - [**Xcode**](https://developer.apple.com/xcode): Apple's IDE for macOS and iOS development
 - [**container**](https://github.com/apple/container): lightweight container runtime for macOS
