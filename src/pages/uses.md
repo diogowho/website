@@ -1,4 +1,5 @@
 ---
+layout: "../layouts/PageLayout.astro"
 title: "Uses"
 description: "A list of the hardware, software, and services I use regularly."
 lastUpdated: "2026-08-19"

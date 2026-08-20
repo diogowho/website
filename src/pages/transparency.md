@@ -1,4 +1,5 @@
 ---
+layout: "../layouts/PageLayout.astro"
 title: "Transparency"
 ---
 

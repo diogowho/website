@@ -1,0 +1,42 @@
+---
+import Layout from "./Layout.astro";
+import Container from "../components/Container.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+
+interface Frontmatter {
+  title: string;
+  description?: string;
+  lastUpdated?: Date | string;
+}
+
+const { title, description, lastUpdated } = Astro.props
+  .frontmatter as Frontmatter;
+const lastUpdatedDate = lastUpdated ? new Date(lastUpdated) : undefined;
+---
+
+<Layout title={title} description={description}>
+  <Container>
+    <div class="space-y-1">
+      <div class="flex items-center gap-1.5">
+        {
+          lastUpdatedDate && (
+            <div class="font-base text-sm">
+              <FormattedDate date={lastUpdatedDate} />
+            </div>
+          )
+        }
+      </div>
+      <h1 class="text-3xl font-semibold text-black dark:text-white">{title}</h1>
+      {
+        description && (
+          <h3 class="text-xl text-black/60 dark:text-white/80">
+            {description}
+          </h3>
+        )
+      }
+    </div>
+    <article>
+      <slot />
+    </article>
+  </Container>
+</Layout>

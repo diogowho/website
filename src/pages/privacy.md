@@ -1,4 +1,5 @@
 ---
+layout: "../layouts/PageLayout.astro"
 title: "Privacy Policy"
 description: "This document outlines how I handle your data and privacy."
 lastUpdated: "2026-08-17"
