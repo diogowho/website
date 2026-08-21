@@ -25,6 +25,11 @@ export const SOCIALS: { name: string; href: string; icon?: string }[] = [
     icon: "mdi:lastfm",
   },
   {
+    name: "Bluesky",
+    href: "https://bsky.app/profile/diogocastro.net",
+    icon: "arcticons:bluesky",
+  },
+  {
     name: "Email",
     href: `mailto:${SELF.email}`,
     icon: "mdi:email",
