@@ -10,12 +10,12 @@
     "generate-types": "wrangler types"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^14.2.4",
+    "@astrojs/cloudflare": "^14.2.5",
     "@astrojs/mdx": "^7.0.8",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.2.5",
+    "astro": "^7.2.9",
     "astro-icon": "^1.1.5",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.1.17",
@@ -25,7 +25,7 @@
     "@iconify-json/arcticons": "^1.2.57",
     "@iconify-json/devicon-plain": "^1.2.57",
     "@iconify-json/mdi": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.93",
+    "@iconify-json/simple-icons": "^1.2.94",
     "@tailwindcss/typography": "^0.5.19",
     "prettier": "3.9.6",
     "prettier-plugin-astro": "0.14.1",
