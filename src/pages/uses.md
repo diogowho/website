@@ -2,20 +2,21 @@
 layout: "../layouts/PageLayout.astro"
 title: "Uses"
 description: "A list of the hardware, software, and services I use regularly."
-lastUpdated: "2026-08-19"
+lastUpdated: "2026-09-07"
 ---
 
 ## Hardware
 
+- **Mac mini (M6, 24GB RAM, 512GB SSD, 2.5G Ethernet)**
 - **MacBook Pro (16-inch, M3 Pro, 18GB RAM, 512GB SSD)**: my daily driver
 - **iPhone 15 Pro (128GB)**
 - **Apple Watch (S11)**: fitness tracking, notifications and health monitoring
 - **iPad Air (M2)**: for note-taking, light gaming and sketching
 - **Apple Pencil Pro**
 - **AirPods Pro (3rd gen)**: used to own the 2nd gen pro's, the 3rd gen fits my ears so much better
-- **Magic Mouse (USB-C)**: good battery + gestures (kinda hurts my hand a little after some hours)
-- **Magic Keyboard (USB-C, Touch ID)**: would love it even more if it had backlight!
-- **AOC 32G2WG8 Monitor (1080p, 240Hz, 32-inch)**: bruv quality
+- **Magic Mouse (USB-C)**: good battery + gestures
+- **Magic Keyboard (USB-C, Touch ID)**
+- **AOC 32G2WG8 Monitor (1080p, 240Hz, 32-inch)**
 
 _yes, I'm an Apple sheep hehe_
 
@@ -45,10 +46,10 @@ I currently use [**Helium**](https://helium.computer/) with these extensions:
 
 ### Development
 
-- [**iTerm2**](https://iterm2.com/): macOS-native terminal emulator
+- [**Ghostty**](https://ghostty.org/): feature-rich terminal emulator
 - [**Neovim**](https://neovim.org/) _(btw)_: highly extensible text editor of choice
 - [**Xcode**](https://developer.apple.com/xcode): Apple's IDE for macOS and iOS development
-- [**container**](https://github.com/apple/container): lightweight container runtime for macOS
+- [**container**](https://github.com/apple/container): Apple's lightweight container runtime for macOS
 
 ### Productivity
 
@@ -67,6 +68,7 @@ I currently use [**Helium**](https://helium.computer/) with these extensions:
 ### Utilities
 
 - [**Homebrew**](https://brew.sh): package manager for macOS
+- [**LuLu**](https://objective-see.org/products/lulu.html): open-source firewall for macOS
 - [**Parcel**](https://parcel.app/): delivery tracking app
 - [**Klack**](https://tryklack.com/): satisfying key sounds
 - [**Cryptomator**](https://cryptomator.org/): open-source client-side file encryption
