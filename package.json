@@ -19,7 +19,7 @@
     "astro-icon": "^1.1.5",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.1.17",
-    "wrangler": "^4.125.0"
+    "wrangler": "^4.131.0"
   },
   "devDependencies": {
     "@iconify-json/arcticons": "^1.2.57",
