@@ -15,6 +15,8 @@ I've become a lot fussier about this over time. When I pick software, services, 
 
 **Honesty**: Things break. Plans change. Just say so. I have much more respect for an honest "we messed up" than a carefully worded non-answer.
 
+**AI**: I believe AI is most useful when it augments human capability rather than replaces it. I use it to work smarter, but I don't outsource judgment to it. Anything AI-assisted gets reviewed and understood before I publish or use it, and I'll be transparent when AI had a meaningful role. I've written more about my approach on my [**AI policy**](/ai).
+
 ## The short version
 
 The internet has enough opaque nonsense already. I try to spend my time and money on things I could comfortably recommend to a friend. If I don't trust it, I won't use it; if I wouldn't use it, I won't endorse it.
