@@ -20,11 +20,6 @@ export const SOCIALS: { name: string; href: string; icon?: string }[] = [
     icon: "arcticons:signal",
   },
   {
-    name: "Last.fm",
-    href: "https://www.last.fm/user/izlul",
-    icon: "mdi:lastfm",
-  },
-  {
     name: "Email",
     href: `mailto:${SELF.email}`,
     icon: "mdi:email",

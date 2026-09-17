@@ -2,7 +2,7 @@
 layout: "../layouts/PageLayout.astro"
 title: "Uses"
 description: "A list of the hardware, software, and services I use regularly."
-lastUpdated: "2026-09-15"
+lastUpdated: "2026-09-17"
 ---
 
 ## Hardware
@@ -65,7 +65,6 @@ I currently use [**Helium**](https://helium.computer/) as my browser, with:
 - [**Apple Music**](https://www.apple.com/apple-music/): music streaming service
 - [**Pixelmator Pro**](https://www.apple.com/uk/pixelmator-pro/): photo and image editing
 - [**Procreate**](https://procreate.com/): drawing and illustration on iPad
-- [**ScrobbleKit**](/scrobblekit): my own open-source Last.fm scrobbler for macOS and iOS
 
 ### Utilities
 

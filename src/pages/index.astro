@@ -4,7 +4,7 @@ import Container from "../components/Container.astro";
 import { SELF, SOCIALS } from "../consts";
 import Link from "../components/Link.astro";
 import { Icon } from "astro-icon/components";
-import LastFMWidget from "../components/LastFMWidget.astro";
+import AppleMusicWidget from "../components/AppleMusicWidget.astro";
 ---
 
 <Layout description=`${SELF.name.split(" ")[0]}'s chaotic corner of the web.`>
@@ -22,7 +22,7 @@ import LastFMWidget from "../components/LastFMWidget.astro";
           {SELF.name}
         </h1>
       </div>
-      <div class="space-y-12">
+      <div class="space-y-10">
         <section>
           <article class="space-y-4">
             <span>
@@ -33,12 +33,6 @@ import LastFMWidget from "../components/LastFMWidget.astro";
                 >. I'm usually messing with computers, networks @ <Link
                   href="https://as207118.net">AS207118</Link
                 >, learning new things, shitposting or lurking online.
-              </p>
-              <p>
-                Right now, I'm building <Link
-                  href="https://github.com/diogowho/ScrobbleKit"
-                  >ScrobbleKit</Link
-                >, a native open-source Last.fm scrobbler for iOS and macOS.
               </p>
             </span>
           </article>
@@ -70,7 +64,7 @@ import LastFMWidget from "../components/LastFMWidget.astro";
           </ul>
         </section>
 
-        <LastFMWidget />
+        <AppleMusicWidget />
       </div>
     </aside>
   </Container>

@@ -1,0 +1,117 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section class="space-y-4">
+  <div class="rounded-xl border border-neutral-200 p-4 dark:border-neutral-800">
+    <div
+      id="am-loading"
+      class="flex animate-pulse items-center gap-4"
+      aria-label="Loading music data"
+    >
+      <div
+        class="h-20 w-20 shrink-0 rounded-lg bg-neutral-300 dark:bg-neutral-700"
+      >
+      </div>
+      <div class="flex-1 space-y-2.5">
+        <div class="h-4 w-44 rounded bg-neutral-300 dark:bg-neutral-700"></div>
+        <div class="h-3.5 w-32 rounded bg-neutral-300 dark:bg-neutral-700">
+        </div>
+        <div class="h-3.5 w-28 rounded bg-neutral-300 dark:bg-neutral-700">
+        </div>
+        <div class="h-3 w-24 rounded bg-neutral-300 dark:bg-neutral-700"></div>
+      </div>
+    </div>
+
+    <a
+      id="am-link"
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="display: none;"
+      class="group flex items-center gap-4 no-underline"
+      aria-label="Last played on Apple Music"
+    >
+      <div
+        class="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-neutral-300 dark:bg-neutral-700"
+      >
+        <img
+          id="am-art"
+          src=""
+          alt=""
+          class="h-full w-full object-cover"
+          style="display: none;"
+        />
+        <div
+          id="am-art-fallback"
+          class="flex h-full w-full items-center justify-center text-black/30 dark:text-white/30"
+        >
+          <Icon name="simple-icons:applemusic" class="h-7 w-7" />
+        </div>
+      </div>
+
+      <div class="min-w-0 flex-1">
+        <span
+          id="am-title"
+          class="block truncate text-base font-semibold text-black transition-colors duration-300 group-hover:text-black dark:text-white dark:group-hover:text-white"
+        ></span>
+        <div id="am-artist" class="truncate text-sm font-medium"></div>
+        <div id="am-album" class="truncate text-sm opacity-60"></div>
+      </div>
+    </a>
+
+    <p id="am-error" class="hidden text-sm opacity-50">
+      Couldn't load music data.
+    </p>
+  </div>
+</section>
+
+<script>
+  const loadingEl = document.getElementById("am-loading");
+  const linkEl = document.getElementById("am-link");
+  const artEl = document.getElementById("am-art");
+  const artFallbackEl = document.getElementById("am-art-fallback");
+  const titleEl = document.getElementById("am-title");
+  const artistEl = document.getElementById("am-artist");
+  const albumEl = document.getElementById("am-album");
+  const errorEl = document.getElementById("am-error");
+
+  async function load() {
+    try {
+      const response = await fetch("/api/recently-played");
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const { tracks } = await response.json();
+
+      const track = tracks?.[0];
+      if (!track) throw new Error("No track data");
+
+      titleEl.textContent = track.title;
+      artistEl.textContent = track.artist;
+      albumEl.textContent = track.album;
+      if (track.url) {
+        linkEl.href = track.url;
+      } else {
+        linkEl.removeAttribute("href");
+      }
+      linkEl.setAttribute(
+        "aria-label",
+        `${track.title} by ${track.artist} on Apple Music`,
+      );
+
+      if (track.artwork) {
+        artEl.src = track.artwork;
+        artEl.alt = `${track.album || track.title} album art`;
+        artEl.style.display = "block";
+        artFallbackEl.style.display = "none";
+      }
+
+      loadingEl.style.display = "none";
+      linkEl.style.display = "flex";
+    } catch {
+      loadingEl.style.display = "none";
+      errorEl.classList.remove("hidden");
+    }
+  }
+
+  load();
+</script>
