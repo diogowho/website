@@ -2,7 +2,7 @@
 layout: "../layouts/PageLayout.astro"
 title: "Uses"
 description: "A list of the hardware, software, and services I use regularly."
-lastUpdated: "2026-09-17"
+lastUpdated: "2026-09-18"
 ---
 
 ## Hardware
@@ -36,7 +36,6 @@ I currently use [**Helium**](https://helium.computer/) as my browser, with:
 - [**SteamDB**](https://steamdb.info/extension/): adds SteamDB information directly to Steam
 - [**Stylus**](https://github.com/openstyles/stylus): userstyles manager
 - [**Violentmonkey**](https://violentmonkey.github.io/): open-source userscript manager
-- [**bleh**](https://github.com/katelyynn/bleh): makes Last.fm considerably nicer to use
 - [**Surfingkeys**](https://github.com/brookhong/Surfingkeys): Vim-style keyboard navigation for the web
 
 ### Communication
@@ -47,9 +46,12 @@ I currently use [**Helium**](https://helium.computer/) as my browser, with:
 ### Development
 
 - [**Ghostty**](https://ghostty.org/): feature-rich terminal emulator
-- [**Neovim**](https://neovim.org/) _(btw)_: my text editor of choice; highly configurable and keyboard-driven
+- [**Neovim**](https://neovim.org/) _(btw)_: my text editor of choice. highly configurable and keyboard-driven
 - [**Xcode**](https://developer.apple.com/xcode): Apple's IDE for developing macOS, iOS and other Apple-platform software
+- [**Xcodes**](https://www.xcodes.app/): easily install and manage Xcode versions
 - [**container**](https://github.com/apple/container): Apple's lightweight container runtime for macOS
+- [**OrbStack**](https://orbstack.dev/): lightweight Docker Desktop alternative for macOS _(there's just some things Apple container doesn't do for me yet)_
+- [**OpenCode**](https://opencode.ai/): I'm a bit skeptical of AI, but I like experimenting with new tech, while keeping my [AI principles](/ai) in mind
 
 ### Productivity
 
@@ -71,7 +73,7 @@ I currently use [**Helium**](https://helium.computer/) as my browser, with:
 - [**Homebrew**](https://brew.sh): package manager for macOS
 - [**Parcel**](https://parcel.app/): package and delivery tracking
 - [**Klack**](https://tryklack.com/): satisfying key sounds
-- [**Flighty**](https://flighty.com/): flight tracker; excellent for keeping an eye on flights, delays and travel plans
+- [**Flighty**](https://flighty.com/): flight tracker. excellent for keeping an eye on flights, delays and travel plans
 
 ### Security & Networking
 
@@ -82,7 +84,7 @@ I currently use [**Helium**](https://helium.computer/) as my browser, with:
 ### Gaming
 
 - [**PrismLauncher**](https://prismlauncher.org/): open-source Minecraft launcher for managing instances, mods and different Minecraft versions
-- [**CrossOver**](https://www.codeweavers.com/crossover/): playing Windows games on macOS without a Windows installation
+- [**CrossOver**](https://www.codeweavers.com/crossover/): play Windows games on macOS without a Windows installation
 
 ### (Programming) Languages
 
