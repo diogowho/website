@@ -1,38 +1,56 @@
 ---
-import Head from "../components/Head.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SELF } from "../consts";
+import '../styles/globals.css';
 
-type Props = {
-  title?: string;
-  description?: string;
-};
+interface Props {
+	title?: string;
+	description?: string;
+	frontmatter?: { title?: string; description?: string };
+}
 
-const { title, description } = Astro.props;
+const frontmatter = Astro.props.frontmatter ?? {};
+const title = Astro.props.title ?? frontmatter.title ?? 'Diogo Castro';
+const description =
+	Astro.props.description ??
+	frontmatter.description ??
+	'Diogo Castro — computer science undergraduate at the Polytechnic University of Setúbal, messing with computers and networks (AS207118).';
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<!doctype html>
-<html lang="en" style="color-scheme: light dark;">
-  <head>
-    <Head
-      title={title ? `${title} | ${SELF.name}` : SELF.name}
-      description={description ? description : ""}
-    />
-  </head>
-  <body>
-    <noscript>
-      <style>
-        .animate {
-          opacity: 1;
-          translate: var(--tw-translate-x) calc(var(--spacing) * 0);
-        }
-      </style>
-    </noscript>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
-  </body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="author" content="Diogo Castro" />
+		<meta name="robots" content="index, follow" />
+		<meta name="color-scheme" content="light dark" />
+		<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FBFBF9" />
+		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212" />
+		<link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Diogo Castro" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:locale" content="en_US" />
+		<meta name="twitter:card" content="summary" />
+
+		<link rel="icon" type="image/png" href="/favicon.png" />
+
+		<slot name="head" />
+	</head>
+	<body class="m-0 bg-paper font-sans leading-[1.6] text-ink antialiased selection:bg-ink selection:text-paper">
+		<header class="mx-auto flex max-w-xl items-baseline justify-between px-6 pt-8">
+			<a
+				href="/"
+				class="rounded-[2px] font-semibold text-ink no-underline focus-visible:outline-2 focus-visible:outline-solid focus-visible:outline-ink focus-visible:outline-offset-4"
+				>~</a
+			>
+		</header>
+		<slot />
+	</body>
 </html>

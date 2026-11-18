@@ -3,7 +3,9 @@ dist/
 .wrangler/
 node_modules/
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 pnpm-debug.log*
 .env
-.dev.vars
+.env.production
 .DS_Store
